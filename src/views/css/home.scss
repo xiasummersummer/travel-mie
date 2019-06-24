@@ -1,0 +1,188 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y; } 
+ html, body, #root, .container {
+   @include rect(100%, 100%);
+ }
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+.box {
+  @include flex();
+  @include rect(100%, auto);
+  @include flexbox();
+  @include flex-direction(column);
+  @include overflow();
+  .header {
+    @include rect(100%, .6rem);
+    // @include background-color(#4f8cff);
+    // background:linear-gradient(90deg,#0af,#0085ff);
+    .searchbox{
+      margin: .1rem 0 0 .1rem;
+      .searchl {
+        border: 1px solid #ccc;
+        background-color: (#eee);
+        @include rect(3rem, .4rem);
+        line-height: .4rem;
+        float: left;
+        .search {
+          margin-left:.1rem;
+          float: left;
+        }
+        .write {
+          margin-left: .1rem;
+          float: left;
+        }
+        .reset {
+          margin-right:.1rem;
+          float:right;
+        }
+
+      }
+      .ring {
+        float: right;
+        margin-right: .1rem;
+        line-height: .4rem;
+        font-size: .25rem;
+      }
+    }
+  }
+  .content {
+    @include flex();
+    @include rect(100%, auto);
+    // .slider-decorator-0 {
+    //   height:30px;
+    //   .am-carousel-wrap {
+    //     height:20px;
+    //     .am-carousel-wrap-dot{
+    //       height:20;
+    //     }
+    //   }
+    // }
+    .homenav{
+      @include flexbox();
+      @include rect(100%, 1rem);
+      @include justify-content();
+      text-align: center;
+      img {
+        @include rect(.66rem, .66rem);
+        background-color:#eee;
+      }
+      .scenic {
+        @include flex()
+      }
+      .stay{
+        @include flex()
+
+      }
+      .culture{
+        @include flex()
+      }
+      .food{
+        @include flex()
+      }
+    }
+    .tripnews {
+      @include rect(100%,.8rem);
+      border: 1px solid #ccc;
+      .tnl {
+        float: left;
+      }
+      .newcont{
+        float: left;
+
+      }
+      .rightarrow{
+        float: left;
+
+      }
+    }
+    .live{
+      border: 1px solid #ccc;
+       @include rect(100%, auto);
+       .livetitle {
+         text-align: center;
+         @include rect(60%, .4rem);
+         margin: 0 auto;
+         line-height: .4rem;
+         @include background-color(#ccc);
+         border-radius: .2rem;
+       }
+       .locklive {
+         @include flexbox();
+         @include rect(100%, 1.2rem);
+         border:1px solid #ccc;
+         li {
+           @include flex();
+           text-align: center;
+         }
+       }
+       .livadv{
+        margin-top:.1rem;
+       }
+    }
+    .hotrecommend{
+      @include rect(100%, auto);
+      .hottitle{
+        text-align: center;
+        @include rect(60%, .4rem);
+        margin: 0 auto;
+        line-height: .4rem;
+        @include background-color(#ccc);
+        border-radius: .2rem;
+      }
+      .hotbanner{
+        margin-top: .1rem;
+      }
+      .hotcontent{
+        @include flexbox();
+        @include rect(100%, 1rem);
+        li {
+          @include rect(24%, 1rem);
+        }
+      }
+    }
+    .talkabout{
+      @include rect(100%, auto);
+      .talkabouttop{
+        @include rect(100%, .5rem);
+        .ttl{
+          @include rect(.1rem, .5rem);
+          float: left;
+        }
+        .say{
+          @include rect(1rem, .5rem);
+          float: left;
+        }
+        .look{
+          @include rect(.5rem, .5rem);
+          float: left;
+        }
+      }
+      .talkcontent{
+        @include rect(100%, .4rem)
+      }
+    }
+  }
+}
+  .footer {
+    @include rect(100%, .5rem);
+    @include background-color(#fff);
+    border-top: 1px solid #ccc;
+    ul {
+      @include flexbox();
+      @include rect(100%, 100%);
+      a {
+        @include flex();
+        @include flexbox();
+        @include rect(auto, 100%);
+        @include flex-direction(column);
+        @include justify-content();
+        @include align-items();
+        @include text-color(#333);
+        &.active {
+          @include text-color(#4f8cff);
+        }
+      }
+    }
+  }
+}

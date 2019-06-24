@@ -1,0 +1,84 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .box, .container2 {
+  @include rect(100%, 100%);
+}
+.ticketbox {
+  @include rect(95%, auto);
+  margin: 0 auto;
+  .tickethead{
+    @include rect(100%, .4rem);
+    line-height: .4rem;
+    .ticketleft{
+    @include rect(10%, .4rem);
+    float: left;
+    // margin-left: .1rem;
+    }
+    .tickettitle{
+      @include rect(80%, .4rem);
+      float: left;
+      text-align: center;
+    }
+  }
+  .ticketname{
+    .tickettitle{
+      @include rect(100%, .4rem);
+      line-height: .4rem;
+      font-weight: 600;
+      font-size: .2rem;
+    }
+    .time{
+      @include rect(100%, .6rem);
+      .usetime {
+        line-height: .6rem;
+        float: left;
+        font-size: .18rem;
+      }
+      .nowtime {
+        @include rect(75%, .6rem);
+        float: left;
+        margin: .1rem 0 0 .2rem;
+        line-height:.6rem;
+        ul {@include flexbox()};
+        li{
+          @include flex();
+          @include rect(.8rem, .4rem);
+          line-height:.4rem;
+          text-align: center;
+          @include background-color(#eee);
+          margin-left :.1rem;
+          border-radius: .2rem;
+        }
+      }
+    }
+    .humanticket{
+      @include rect(100%, 1rem);
+      .htprice{
+        @include rect(60%, 1rem);
+        float: left;
+      }
+      .checkinfo{
+        @include rect(30%, 1rem);
+        float: left;
+        input{
+          display: none;
+        }
+        // .am-list{
+        //   @include rect(100%,100%);
+        //   .am-list-body{
+        //     @include rect(100%,100%);
+        //     .am-list-item{
+        //     @include rect(100%,100%);
+        //     .am-list-line{
+        //     @include rect(100%,100%);
+        //     .am-stepper-input-wrap{
+        //       @include rect(1rem,1rem);
+        //     }
+        //     }
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}

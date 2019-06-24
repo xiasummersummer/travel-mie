@@ -1,0 +1,128 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .box, .container2 {
+  @include rect(100%, 100%);
+}
+.container2 {
+  .detailbox {
+    @include rect(100%, auto);
+    .detailtop{
+      @include rect(100%, .4rem);
+      .detailleft{
+        margin-left: .1rem;
+        font-size: .18rem;
+        float: left;
+        line-height: .4rem;
+      }
+      .detitle{
+        float: left;
+        @include rect(80%,.4rem);
+        line-height:.4rem;
+        text-align: center;
+      }
+    }
+    .detailbanner{
+      @include rect(100%, auto);
+      margin-top: .1rem;
+    }
+    .senseinfobox {
+      @include rect(95%, auto);
+      margin: 0 auto;
+      .sensename{
+        @include rect(100%, .4rem);
+        font-size: .16rem;
+        line-height: .4rem;
+      }
+      .recommendstar{
+        @include rect(100%, .4rem);
+        line-height: .4rem;
+        span {
+          float: left;
+        }
+        .starbox {
+          float: left;
+          margin-left: .1rem;
+        }
+      }
+      .senseinfo{
+        @include rect(100%, auto);
+        margin-top: .05rem;
+        .sensetitle{
+          font-size: .18rem;
+
+        }
+        .infobox {
+          margin-top: .05rem;
+          .address{
+          // @include rect(100%, .21rem);
+            span {
+              // &:nth-child(1){
+              //   color:#888;
+              // }
+              &:nth-child(2){
+                margin: 0 .2rem 0 .1rem;
+              }
+              &:nth-child(4){
+                margin-left: 1rem;
+                display: inline-block;
+                @include rect(.8rem, .25rem);
+                text-align: center;
+                line-height: .25rem;
+                border-radius: .01rem;
+                border: 1px solid #ccc;
+              }
+            }  
+          }
+          .tell{
+            span{
+              &:nth-child(1){
+                color:#888;
+              }
+              &:nth-child(2){
+                margin: 0 .2rem 0 .1rem;
+              }
+            }
+          }
+          .time{
+            span{
+              &:nth-child(1){
+                color:#888;
+              }
+              &:nth-child(2){
+                margin: 0 .2rem 0 .1rem;
+              }
+            }
+          }
+          .ticket{
+            span{
+              &:nth-child(1){
+                color:#888;
+              }
+              &:nth-child(2){
+                margin: 0 .2rem 0 .1rem;
+              }
+              &:nth-child(4){
+                margin-left: 1.6rem;
+                display: inline-block;
+                @include rect(.6rem, .25rem);
+                text-align: center;
+                line-height: .25rem;
+                border-radius: .1rem;
+                background-color:#ccc;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .introuduce{
+        margin-top: .2rem;
+        .intit {
+          @include rect(100%, .4rem);
+          font-size: .18rem;
+        }
+        .sensemsg{}
+      }
+    }
+  }
+}

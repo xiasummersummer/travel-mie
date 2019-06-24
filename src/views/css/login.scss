@@ -1,0 +1,211 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .box, .container2 {
+  @include rect(100%, 100%);
+}
+.loginbox {
+  @include rect(100%, 100%);
+  .header {
+    @include rect(100%, 2.18rem);
+    background:url("../../assets/loginradius.png");
+    background-size: 3.75rem 2.18rem;
+    span{
+      &:nth-child(1){
+        @include rect(100%, .2rem);
+        display: block;
+      }
+    }
+    .return {
+      margin-left: .14rem;
+      font-size: .22rem;
+      @include text-color(#fff);
+    }
+    .loginguide{
+      @include rect(100%,auto);
+      text-align: center;
+      .lgt{
+        margin-top: .2rem;
+        @include rect(100%, .3rem);
+        line-height: .3rem;
+        font-size:.26rem;
+        @include text-color(#fff);
+      }
+      .lgb{
+        @include rect(100%, .16rem);
+        @include text-color(#fff);
+        opacity:.6;
+        margin-top: .02rem;
+      }
+      .logo{
+        margin-top: .6rem
+      }
+    }
+  }
+  .logintype{
+    @include rect(90%, auto);
+    margin: .4rem auto;
+    .type {
+      @include rect(100%, .4rem);
+      // line-height: .4rem;
+      @include flexbox();
+      text-align: center;
+      .account{
+        @include flex();
+        font-size:.16rem;
+        &.account {
+          div{
+            display: block;
+          }
+        }
+      }
+        .active{
+          margin:0;
+          display: block;
+          margin: 0 auto;
+          @include rect(.3rem, .02rem);
+          @include background-color(#00d5c9)
+          }
+      .phone{
+        font-size:.16rem;
+        @include flex();
+      }
+    }
+    .accountnum{
+      margin-top: .1rem;
+      .tell {
+        @include rect(100%, .5rem);
+        font-size: .14rem;
+        border-bottom: 1px solid #ccc;
+        input {
+        @include rect(80%, .4rem);
+        // @include text-color(#fff);
+        margin-left: .08rem;
+        }
+      }
+      .psd{
+        @include rect(100%, .6rem);
+        font-size: .14rem;
+        border-bottom: 1px solid #ccc;
+        input {
+          @include rect(80%, .58rem);
+          margin-left: .08rem;
+        }
+        .closeeye {
+          margin-left: .2rem;
+          }
+      }
+    }
+    .phonenum{
+      margin-top: .1rem;
+      .tell {
+        @include rect(100%, .5rem);
+        font-size: .14rem;
+        border-bottom: 1px solid #ccc;
+        input {
+        @include rect(80%, .4rem);
+        // @include text-color(#fff);
+        margin-left: .08rem;
+        }
+      }
+      .psd{
+        @include rect(100%, .6rem);
+        font-size: .14rem;
+        border-bottom: 1px solid #ccc;
+        input {
+          @include rect(65%, .58rem);
+          float: left;
+          margin-left: .08rem;
+        }
+        .getcode {
+          margin-top: .15rem;
+          border-left: 1px solid #ccc;
+          float: left;
+          @include text-color(#666);
+          font-size:.18rem;
+          line-height: .26rem;
+          text-indent: .1rem;
+        }
+      }
+    }
+    .reglogin{
+      margin-top: .1rem;
+      .login{
+        @include rect(100%,.38rem);
+        text-align: center;
+        line-height: .38rem;
+        @include text-color(#fff);
+        background:url("../../assets/login.png");
+        span {
+          opacity: .6;
+          font-size: .18rem;
+        }
+      }
+      .register {
+        margin-top: .1rem;
+        @include rect(100%,.38rem);
+        text-align: center;
+        line-height: .38rem;
+        border: 2px solid #ccc;
+        border-radius: .2rem;
+      }
+    }
+    .thirdtype{
+        margin-top: .2rem;
+        @include rect(100%, .7rem);
+      .line {
+        text-align: center;
+        span {
+          display: inline-block;
+          line-height: .21rem;
+          &:nth-child(1){
+            // @include text-color(#fff);
+            @include rect(1rem, .01rem);
+            background: #ccc;
+            vertical-align: middle;
+          }
+          &:nth-child(2){
+            margin: 0 .1rem;
+          }
+          &:nth-child(3){
+            @include rect(1rem, .01rem);
+            background: #ccc;
+            vertical-align: middle;
+          }
+        }
+      }
+      .typeslist{
+        // margin: 0 .1rem;
+        @include flexbox();
+        text-align: center;
+        span {
+          font-size: .3rem;
+          @include text-color(#666);
+          @include flex();
+          &:nth-child(3){
+            font-size:.24rem;
+            margin-top: .05rem;
+          }
+        }
+      }
+    }
+    .checkboxinfo{
+      text-align: center;
+      @include rect(100%, .3rem);
+      @include flexbox();
+      justify-content: center;
+      .dui {
+        font-size: .20rem;
+        // margin-top: .1rem;
+        // float: left;
+        @include text-color(#59e3df);
+      }
+      .agree {
+        line-height: .3rem;
+        // float: left;
+        margin-left: .05rem;
+        font-size: .12rem;
+        @include text-color(#666);
+      }
+    }
+  }
+}
