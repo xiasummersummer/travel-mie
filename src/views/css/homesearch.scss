@@ -8,7 +8,8 @@
   @include flex-direction(column);
   .homesearchbox {
     @include flex();
-    @include rect(100%, auto);
+    @include rect(90%, auto);
+    margin: 0 auto;
     @include flexbox();
     @include flex-direction(column);
     @include overflow();
@@ -20,22 +21,84 @@
       // background:linear-gradient(90deg,#0af,#0085ff);
       .return {
         @include rect(.5rem, .6rem);
+        font-size: .18rem;
       }
       .searchbox {
-        @include rect(100%, .3rem);
+        @include rect(100%, .4rem);
         @include flexbox();
+        margin-top: .1rem;
+        background-color: #eee;
         .searchl {
-          @include rect(100%, .3rem);
+          @include rect(100%, .4rem);
           @include flexbox();
           border: 1px solid #ccc;
           div:nth-child(1) {
-
+            line-height: .4rem;
+            margin-left: .1rem;
+          }
+          input {
+            background-color: #eee;
+            border: none;
+            text-indent: .1rem;
+            @include flex();
+          }
+          .reset{
+            line-height: .4rem;
+            margin: 0 .1rem;
           }
         }
       }
        .ring{
+        text-align:center;
         @include rect(.5rem, .6rem);
       }
+      }
+      .searchcont {
+        @include flex();
+        @include rect(100%, auto);
+        .hotbox {
+          margin-top: .1rem;
+          .hot {
+            background-color: #ccc;
+            @include rect(1rem, .3rem);
+            text-align: center;
+            line-height:.3rem;
+            border-radius: .2rem;
+          }
+          ul {
+            margin-top: .1rem;
+            @include rect(100%,.4rem);
+            @include flexbox();
+            li {
+              @include rect(.5rem, .4rem);
+            }
+          }
+        }
+        .historybox {
+          margin-top: .1rem;
+          .searchhis{
+            background-color: #ccc;
+            @include rect(1rem, .3rem);
+            text-align: center;
+            line-height:.3rem;
+            border-radius: .2rem;
+          }
+          .goodsense {
+            margin-top: .1rem;
+          }
+        }
+        .senselive {
+          margin-top: .1rem;
+        }
+        .clear{
+          margin-top: .2rem;
+          .garbage {
+            // @include text-color(#ccc)
+          }
+          span:nth-child(2) {
+            margin-left: .1rem;
+          }
+        }
       }
     }
  }

@@ -1,18 +1,18 @@
 import React from 'react';
-import Homebanner from '@/components/homebox/Homebanner'
+// import Homebanner from '@/components/homebox/Homebanner'
 import '@/views/css/sensedetail.scss'
 // import { Carousel, WingBlank } from 'antd-mobile'
-import axios from 'axios';
+// import axios from 'axios';
 import '@/views/css/ticket.scss';
 
-const checkArr = [
-  {
-    txt:'随时退换',
-  },
-  {
-    txt:'随时退换1',
-  }
-]
+// const checkArr = [
+//   {
+//     txt:'随时退换',
+//   },
+//   {
+//     txt:'随时退换1',
+//   }
+// ]
 
 class Com extends React.Component {
   constructor(props){

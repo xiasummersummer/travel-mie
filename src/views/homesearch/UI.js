@@ -16,6 +16,33 @@ class Com extends React.Component {
           </div>
             <div className="ring iconfont iconPathx"></div>
         </div>
+        <div className="searchcont">
+          <div className="hotbox">
+            <div className="hot">
+              热门搜索
+            </div>
+            <ul>
+              <li>特产</li>
+              <li>景点</li>
+            </ul>
+          </div>
+          <div className="historybox">
+            <div className="searchhis">
+              搜索历史
+            </div>
+            <div className="goodsense">
+              哪里比较好玩
+            </div>
+          </div>
+          <div className="senselive">
+            景点直播
+          </div>
+          <div className="clear">
+            <span class="iconfont iconlajitong"></span>
+            <span>清除历史</span>
+          </div>
+        </div> 
+
       </div>
     )
   }

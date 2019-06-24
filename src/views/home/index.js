@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import UI from './UI';
 // import api from '@/api';
 import * as ajax  from '@/api'
-import axios from 'axios'
+// import axios from 'axios'
 
 const mapStateToProps = (state) =>({
   homebannerlist: state.home.homebannerlist,

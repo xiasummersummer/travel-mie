@@ -1,7 +1,7 @@
 import React from 'react';
-import Homebanner from '@/components/homebox/Homebanner'
+// import Homebanner from '@/components/homebox/Homebanner'
 import '@/views/css/sensedetail.scss'
-import { Carousel, WingBlank } from 'antd-mobile'
+import { Carousel } from 'antd-mobile'
 import axios from 'axios';
 
 class Com extends React.Component {
@@ -22,8 +22,8 @@ class Com extends React.Component {
     })
   }
   render(){
-        {console.log(this.state.detailbanner)}
-        console.log(this.props)
+        // {console.log(this.state.detailbanner)}
+        // console.log(this.props)
     return (
       <div className="detailbox">
         <div className="detailtop">
