@@ -9,7 +9,7 @@ class Com extends React.Component {
     console.log(this.props)
     return (
       <div className="box">
-        用户
+        用户黄寺大街粉红色的积分换
       </div>
     )
   }
