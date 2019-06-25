@@ -6,25 +6,72 @@
 // .container {
 //   @include flexbox();
 //   @include flex-direction(column);
-//   .footer {
-//     @include rect(100%, .5rem);
-//     @include background-color(#fff);
-//     border-top: 1px solid #ccc;
-//     ul {
-//       @include flexbox();
-//       @include rect(100%, 100%);
-//       a {
-//         @include flex();
-//         @include flexbox();
-//         @include rect(auto, 100%);
-//         @include flex-direction(column);
-//         @include justify-content();
-//         @include align-items();
-//         @include text-color(#333);
-//         &.active {
-//           @include text-color(#4f8cff);
-//         }
-//       }
-//     }
-//   }
-// }
+.footer {
+  @include rect(100%, .5rem);
+  @include background-color(#fff);
+  border-top: 1px solid #ccc;
+  ul {
+    @include flexbox();
+    @include rect(100%, 100%);
+    a {
+      margin-top: .01rem;
+      @include flex();
+      @include flexbox();
+      @include rect(auto, 100%);
+      @include flex-direction(column);
+      @include justify-content();
+      @include align-items();
+      @include text-color(#333);
+      .iconfont-home{
+        background: url(./assets/footericon6.png) no-repeat -.02rem -.02rem;
+        display: inline-block;
+        @include rect(.18rem,.25rem);
+        background-size:1.18rem, .59rem;
+        // background-image:;
+        // background-position:;
+      }
+      &.active {
+        .iconfont-home{
+          background-position: 0 -.3rem
+        }
+      }
+      .iconfont-stragety {
+        background: url(./assets/footericon6.png) no-repeat -.24rem -.02rem;
+        display: inline-block;
+        @include rect(.26rem,.26rem);
+        background-size:1.18rem, .59rem;
+      }
+      &.active {
+        .iconfont-stragety{
+          background-position: -.25rem -.3rem
+        }
+      }
+      .iconfont-find{
+        background: url(./assets/footericon6.png) no-repeat -.51rem -.01rem;
+        display: inline-block;
+        @include rect(.36rem,.26rem);
+        background-size:1.18rem, .59rem;
+      }
+      &.active {
+        .iconfont-find{
+          background-position: -.51rem -.29rem
+        }
+      }
+      .iconfont-user{
+        background: url(./assets/footericon6.png) no-repeat -.9rem -.01rem;
+        display: inline-block;
+        @include rect(.26rem,.25rem);
+        background-size:1.18rem, .59rem;
+      }
+      &.active {
+        .iconfont-user{
+          background-position: -.9rem -.3rem
+        }
+      }
+      &.active {
+        @include text-color(#00dbc2);
+        // background-position: 0 -.3rem
+      }
+    }
+  }
+}

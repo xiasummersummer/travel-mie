@@ -9,7 +9,7 @@ const Com =() =>(
         <div className="num">1</div>
       </div>
       <div className="boxr">
-        <p className="stobtitle">信步古老城墙，西安景点1日游</p>
+        <p className="stobtitle">信步古老城墙，西安景点1日游信步古老城墙，</p>
         <div className="look">
           <div className="people">6767</div>
           <div className="iconfont iconeye eye"></div>

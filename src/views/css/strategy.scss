@@ -69,19 +69,95 @@
           .boxr {
             float: left;
             margin-left: .2rem;
+            @include rect(55%, auto);
             .stobtitle {
-               
+               line-height: .25rem;
+               font-size: .16rem;
             }
             .look{
-              .people{}
-              .eye{}
+              margin-top: .1rem;
+              @include flexbox();
+              .people{
+                margin-left: 1.2rem;
+              }
+              .eye{
+                @include text-color(#ccc);
+              }
+            }
+            .time {
+              margin-top: .1rem;
+              @include flexbox();
             }
           }
         }
       }
       // 游友攻略
       .stpbox {
-
+        margin-top: .1rem;
+        .sttop {
+          @include rect(100%, .4rem);
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          line-height: .4rem;
+          @include text-color(#666);
+          .addressicon {
+            @include rect(10%, .4rem);
+            float: left;
+            font-size: .2rem;
+          }
+          .hot {
+            float: left;
+            @include rect(15%, .5rem);
+          }
+          .bottomarrow {
+            float: right;
+            @include rect(20%, .5rem);
+          }
+        }
+        .stcont{
+          .head {
+            @include rect(100%, .3rem);
+            @include flexbox();
+          }
+          .userviews {
+            .address {
+              @include flexbox();
+            }
+            .viewcont {
+              @include flexbox();
+              @include rect(100%, auto);
+              .book {}
+              .viewwrite {}
+            }
+            .imgbox{}
+          }
+          .operation{
+            border-top: 1px solid #ccc;
+            @include flexbox();
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            .relay {
+              @include flex();
+              @include text-color(#666);
+              .rnum{
+                margin-left: .1rem;
+              }
+            }
+            .msg {
+              @include flex();
+              .mnum {
+                margin-left: .1rem;
+              }
+            }
+            .good{
+              @include text-color(#666);
+              @include flex();
+              .gnum {
+                margin-left: .1rem;
+              }
+            }
+          }
+        }
       }
     }
   }

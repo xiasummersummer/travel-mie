@@ -4,7 +4,7 @@ const Com =() =>(
 <div className="strategycontent">
   <div className="stpbox">
     <div className="sttop">
-      <div className="iconfont icondizhi1"></div>
+      <div className="iconfont icondizhi1 addressicon"></div>
       <div className="hot">热门</div>
       <div className="bottomarrow iconfont iconjiantou1"></div>
     </div>
@@ -18,19 +18,28 @@ const Com =() =>(
         <div className="address">
           <div className="addresstitle">西安攻略</div>
           <div className="storename">言又几书店</div>
-          <div className="viewcont">
-            上的讲话精神可电话卡
-          </div>
-          <div className="imgbox">
-            <img src="" alt=""/>
-            <img src="" alt=""/>
-          </div>
         </div>
+        <div className="viewcont">
+            <span className="iconfont iconshu book"></span>
+            <div className="viewwrite">
+              hjasdhaksdjl
+            </div>
+        </div>
+        <div className="imgbox">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+          </div>
       </div>
       <div className="operation">
-        <div className="relay"></div>
-        <div className="msg"></div>
-        <div className="good"></div>
+        <div className="relay iconfont iconzhuanfa">
+          <span className="rnum">100</span>
+        </div>
+        <div className="msg iconfont iconxiaoxi2">
+          <span className="mnum">300</span>
+        </div>
+        <div className="good iconfont iconzan">
+          <span className="gnum">121</span>
+        </div>
       </div>
     </div>
   </div>

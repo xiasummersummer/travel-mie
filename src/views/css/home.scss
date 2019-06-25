@@ -164,25 +164,4 @@
     }
   }
 }
-  .footer {
-    @include rect(100%, .5rem);
-    @include background-color(#fff);
-    border-top: 1px solid #ccc;
-    ul {
-      @include flexbox();
-      @include rect(100%, 100%);
-      a {
-        @include flex();
-        @include flexbox();
-        @include rect(auto, 100%);
-        @include flex-direction(column);
-        @include justify-content();
-        @include align-items();
-        @include text-color(#333);
-        &.active {
-          @include text-color(#4f8cff);
-        }
-      }
-    }
-  }
 }
