@@ -1,0 +1,57 @@
+@import '@/lib/reset.scss';
+html, body, #root, .box, .container2 {
+  @include rect(100%, 100%);
+  // background:url("../../assets/bg.png") no-repeat;
+}
+
+.container2 {
+  .isloginbox {
+    .header {
+      width:100%;
+      height:1.99rem;
+      background:url("../../assets/loginradius.png") no-repeat;
+      // background-position: 0 -0.56rem;
+    }
+    .islogincontent{
+      @include rect(100%,100%);
+      padding:0 0.31rem;
+      .user {
+        background:url("../../assets/headerbg.png") no-repeat;
+        width: 321px;
+        height:183px;
+        margin-top:-1.59rem;
+        box-shadow: 0 0 .1rem rgba(100, 100, 100, .1);
+        border-radius: .05rem;
+      }
+      .userlogo {
+        text-align: center;
+        padding-top: 0.1rem;
+        width:3.21rem;
+        height:0.83rem;
+        img {
+          width: 73px;
+          height: 73px;
+        }
+      }
+      .userbottom {
+        text-align: center;
+        padding: 0.05rem;
+        width: 321px;
+        height: 100px;
+        h5 {
+          font: 0.2rem/0.3rem "";
+        }
+        p {
+          font: 0.1rem/0.13rem "";
+        }
+        span {
+          font:0.12rem/0.5rem "";
+          color: darkgray;
+        }
+      }
+    }
+  }
+}
+
+
+
