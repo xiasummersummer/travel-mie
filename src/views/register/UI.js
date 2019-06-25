@@ -11,6 +11,9 @@ class Com extends React.Component {
       passsword: ''
     }
   }
+  goreturn () {
+    this.props.history.go(-1)
+  }
   // changeusername(){}
   // changesendcode(){}
   // sendcodeClick () {
@@ -43,7 +46,7 @@ class Com extends React.Component {
     return (
       <div className="registerbox">
         <div className="header">
-          <span className="iconfont iconzuojiantou return"></span>
+          <span className="iconfont iconzuojiantou return" onClick={this.goreturn.bind(this)}></span>
           <span className="registertit">注册账号</span>
         </div>
         <div className="registerinfo">

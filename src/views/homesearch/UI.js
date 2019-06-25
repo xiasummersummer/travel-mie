@@ -38,7 +38,7 @@ class Com extends React.Component {
             景点直播
           </div>
           <div className="clear">
-            <span class="iconfont iconlajitong"></span>
+            <span class="iconfont iconlajitong garbage"></span>
             <span>清除历史</span>
           </div>
         </div> 

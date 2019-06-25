@@ -2,50 +2,66 @@ import React from 'react';
 import axios from 'axios'
 import '@/views/css/login.scss'
 import { Toast } from 'antd-mobile'
+import Phonelogin from '@/components/homebox/Phonelogin.js'
+import Homereg from '@/components/homebox/Homereg.js'
 class Com extends React.Component {
   constructor(props){
     super(props)
     this.state=({
       username: '',
       password: '',
-      accountnum: true
+      accountnum: true,
+      phone:1
     })
   }
-  changeusername(e){
-    let uname = e.target.value;
+  phoneclogin () {
     this.setState({
-      username: uname
+      phone:1
     })
   }
-  changepassword(e){
-    let upass = e.target.value;
+  regclogin () {
     this.setState({
-      password: upass
+      phone:2
     })
   }
-  handlelogin () {
-    console.log(this.state.username)
-    console.log(this.state.password)
-    axios.post('http://www.daxunxun.com/users/login',{
-      username: this.state.username,
-      password: this.state.password
-    }).then(res=>{
-      console.log(res.data)
-      if (res.data === 0) {
-        Toast.info('登陆失败')
-      } else if (res.data === 2) {
-        Toast.info('没有该用户')
-      } else if (res.data === -1) {
-        Toast.info('密码错误')
-      } else {
-        Toast.info('登陆成功')
-        // 有的需要注册即为登陆成功，跳转到首页
-        // localStorage.setItem('isLogin', 'ok')
-        // this.$router.push('/')
-        this.props.history.push('/')
-      }
-    })
+  toregister () {
+    this.props.history.push('/register')
   }
+  // changeusername(e){
+  //   let uname = e.target.value;
+  //   this.setState({
+  //     username: uname
+  //   })
+  // }
+  // changepassword(e){
+  //   let upass = e.target.value;
+  //   this.setState({
+  //     password: upass
+  //   })
+  // }
+  // handlelogin () {
+  //   console.log(this.state.username)
+  //   console.log(this.state.password)
+  //   axios.post('http://www.daxunxun.com/users/login',{
+  //     username: this.state.username,
+  //     password: this.state.password
+  //   }).then(res=>{
+  //     console.log(res.data)
+  //     if (res.data === 0) {
+  //       Toast.info('登陆失败')
+  //     } else if (res.data === 2) {
+  //       Toast.info('没有该用户')
+  //     } else if (res.data === -1) {
+  //       Toast.info('密码错误')
+  //     } else {
+  //       Toast.info('登陆成功')
+  //       // 有的需要注册即为登陆成功，跳转到首页
+  //       // localStorage.setItem('isLogin', 'ok')
+  //       // this.$router.push('/')
+  //       this.props.history.push('/')
+  //     }
+  //   })
+  // }
   render(){
     console.log(this.props)
     return (
@@ -61,41 +77,18 @@ class Com extends React.Component {
         </div>
           <div className="logintype">
             <div className="type">
-              <div className="account">
+              <div onClick = { this.phoneclogin.bind(this) } className="account">
                 <div>账号密码登录</div>
-                <i className="active"></i>
+                <i className={this.state.phone===1?"active":''}></i>
               </div>
-              <div className="phone">
+              <div onClick = { this.regclogin.bind(this) } className="phone">
                 <div>手机验证码登录</div>
-                <i></i>
+                <i  className={this.state.phone===2?"active":''}></i>
               </div>
             </div>
-            
-            <div className="accountnum">
-              {/* <div className="tell">
-                <input type="tell" placeholder = "手机号/用户名/邮箱"/>
-              </div>
-              <div className="psd">
-                <input type="password" placeholder="请输入密码"/>
-                <span className="iconfont iconclose-eye closeeye"></span>
-              </div> */}
-            </div>
-            <div className="phonenum">
-              <div className="tell">
-                  <input type="tell" placeholder = "请输入您的手机号码"/>
-                </div>
-                <div className="psd">
-                  <input type="password" placeholder="请输入短信验证码"/>
-                  <div className="getcode">
-                    获取验证码
-                  </div>
-                </div>
-            </div>
+             {this.state.phone===1?<Phonelogin /> : <Homereg />}
             <div className="reglogin">
-              <div className="login">
-                <span>登录</span>
-              </div>
-              <div className="register">
+              <div className="register" onClick={this.toregister.bind(this)}>
                 注册
               </div>
             </div>
