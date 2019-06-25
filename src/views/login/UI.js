@@ -1,7 +1,7 @@
 import React from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 import '@/views/css/login.scss'
-import { Toast } from 'antd-mobile'
+// import { Toast } from 'antd-mobile'
 import Phonelogin from '@/components/homebox/Phonelogin.js'
 import Homereg from '@/components/homebox/Homereg.js'
 class Com extends React.Component {

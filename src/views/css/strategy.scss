@@ -1,0 +1,92 @@
+@import '@/lib/reset.scss';
+ html, body, #root, .container {
+   @include rect(100%, 100%);
+ }
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .strategybox {
+    @include flex();
+    @include rect(95%, auto);
+    margin: 0 auto;
+    @include flexbox();
+    @include flex-direction(column);
+    @include overflow();
+    .searchbox {
+      @include rect(100%, .3rem);
+      @include background-color(#eee);
+      margin-top: .1rem;
+      @include flexbox();
+      border-radius: .2rem;
+      .search {
+      @include rect(10%, .3rem);
+      margin: .03rem 0 0 .1rem;
+      }
+      .inputbox {
+      @include rect(70%, .3rem);
+      line-height: .3rem;
+      }
+      margin-bottom: .2rem;
+    }
+    .strategynav {
+      @include rect(80%, .4rem);
+      line-height: .4rem;
+      margin: 0 auto;
+      @include flexbox();
+      @include background-color(#eee);
+      text-align: center;
+      overflow:hidden;
+      border-radius: .2rem;
+      .navl {
+        @include flex();
+      }
+      .active {
+        @include background-color(#ccc);
+      }
+      .navr {
+        @include flex();
+      }
+    }
+    .strategycontent {
+      .stobox {
+        margin-top: .1rem;
+        .stoboxli {
+          .boxl {
+            @include rect(35%, 1.2rem);
+            float: left;
+            @include background-color(#eee);
+            position: relative;
+            .stoimg {
+            @include rect(1rem, 1rem);
+            }
+            .num{
+            @include rect(.2rem, .2rem);
+            position: absolute;
+            top: 0;
+            left: 0;
+            }
+          }
+          .boxr {
+            float: left;
+            margin-left: .2rem;
+            .stobtitle {
+               
+            }
+            .look{
+              .people{}
+              .eye{}
+            }
+          }
+        }
+      }
+      // 游友攻略
+      .stpbox {
+
+      }
+    }
+  }
+
+
+
+
+}
