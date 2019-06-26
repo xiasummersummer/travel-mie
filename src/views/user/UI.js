@@ -23,23 +23,25 @@ class Com extends React.Component {
             <div>
               <div className="header"></div>
               <div className="usercontent">
-                {/* <div className="userlogo">
+                <div className="userlogo">
                   <div className="top">
+                    <span className = "iconfont iconxinxi first"></span>
                     <img src={ userLogo } alt=""/>
+                    <span className = "iconfont iconshezhi last"></span>
                   </div>
                   <div className="bottom">
                     <h5>咩咩</h5>
                     <p>Angel</p>
                     <span>因为有梦，所以勇敢出发，选择出发，便只顾风雨兼程。</span>
                   </div>
-                </div> */}
-                <div className="gologin">
+                </div>
+                {/* <div className="gologin">
                   <img src= { userLogin } alt=""/>
                   <p>登录后享受更多优惠及服务</p>
                   <div className="loginbtn">
                     <span>登录/注册</span>
                   </div>
-                </div>
+                </div> */}
                 <div className="footprin">
                   <h5>我的足迹</h5>
                   <p>点击生成足迹地图</p>
@@ -52,10 +54,15 @@ class Com extends React.Component {
                   </div>
                   <p>用照片记录旅行的小技巧</p>
                   <div className="usertip">
+                    <span>|</span>
                     <span>笔记</span>
+                    <span>|</span>
                     <span>游记</span>
+                    <span>|</span>
                     <span>问答</span>
+                    <span>|</span>
                     <span>点评</span>
+                    <span>|</span>
                   </div>
                   <div className="img">
                     <img src={ userPhoto } alt=""/>

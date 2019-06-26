@@ -30,39 +30,56 @@ html, body, #root, .container2 {
           padding: 0 30px;
           display: flex;
           flex-direction: column;
-          // .userlogo {
-          //   background:url("../../assets/headerbg.png") no-repeat;
-          //   width: 321px;
-          //   height:183px;
-          //   margin-top:-1.59rem;
-          //   border-radius: .05rem;
-          //   .top {
-          //     text-align: center;
-          //     padding-top: 0.1rem;
-          //     width:3.21rem;
-          //     height:0.83rem;
-          //     img {
-          //       width: 73px;
-          //       height: 73px;
-          //     }
-          //   }
-          //   .bottom {
-          //     text-align: center;
-          //     padding: 0.05rem;
-          //     width: 321px;
-          //     height: 100px;
-          //     h5 {
-          //       font: 0.2rem/0.3rem "";
-          //     }
-          //     p {
-          //       font: 0.1rem/0.13rem "";
-          //     }
-          //     span {
-          //       font:0.12rem/0.5rem "";
-          //       color: darkgray;
-          //     }
-          //   }
-          // }
+          .userlogo {
+            background:url("../../assets/headerbg.png") no-repeat;
+            width: 321px;
+            height:183px;
+            margin-top:-1.59rem;
+            border-radius: .05rem;
+            .top {
+              text-align: center;
+              padding-top: 0.1rem;
+              width:3.21rem;
+              height:0.83rem;
+              position: relative;
+              .first {
+                color: darkgray;
+                position: absolute;
+                top:.14rem;
+                left:.2rem;
+              }
+              .last {
+                color: darkgray;
+                position: absolute;
+                top:.14rem;
+                right:.2rem; 
+              }
+              img {
+                width: 73px;
+                height: 73px;
+              }
+            }
+            .bottom {
+              text-align: center;
+              padding: 0.05rem;
+              width: 321px;
+              height: 100px;
+              h5 {
+                font: 0.15rem/0.15rem "";
+                margin-top:0.05rem;
+                color: darkgray;
+              }
+              p {
+                font: 0.1rem/0.1rem "";
+                margin-top:0.04rem;
+                color: darkgray;
+              }
+              span {
+                font:0.12rem/0.5rem "";
+                color: darkgray;
+              }
+            }
+          }
           .gologin {
             @include rect (3.21rem, 1.43rem);
             background:url("../../assets/usergologin.png") no-repeat;
@@ -72,12 +89,18 @@ html, body, #root, .container2 {
               @include rect(.75rem, .75rem);
               margin-top: -.33rem;
             }
+            p {
+              font-size: .1rem;
+              line-height: .1rem;
+              color: darkgray;
+              margin-top: .16rem;
+            }
             .loginbtn {
               margin: 0 auto;
               width: 1.11rem;
               height: .22rem;
               background:url("../../assets/loginbtn.png") no-repeat;
-              margin-top: .2rem;
+              margin-top: .11rem;
               span {
                 color: #fff;
               }
@@ -97,7 +120,6 @@ html, body, #root, .container2 {
             //   }
             //   span {
             //     font: .25rem/.4rem "";
-                
             //   }
             // }
           }
@@ -110,12 +132,12 @@ html, body, #root, .container2 {
             h5 {
               font:0.15rem/0.3rem "";
               color: darkgray;
-              margin: 10px 0 0 20px;
+              margin: .2rem 0 0 .17rem;
             }
             p {
               font:0.12rem/0.2rem "";
               color: darkgray;
-              margin-left: 20px;
+              margin-left: .17rem;
             }
           }
           .usertravels {
@@ -127,7 +149,7 @@ html, body, #root, .container2 {
             h5 {
               font:0.15rem/0.3rem "";
               color: darkgray;
-              margin: 10px 0 0 20px;
+              margin: .1rem 0 0 .17rem;
             }
             .usershare {
               width: 1.42rem;
@@ -147,16 +169,17 @@ html, body, #root, .container2 {
             p {
               text-align: center;
               font: .01rem/.1rem "";
-              margin-top: .1rem;
+              margin-top: .14rem;
               color: darkgray;
             }
           }
           .usertip {
             text-align: center;
-            padding-top: .1rem;
+            padding-top: .16rem;
             color: darkgray;
             span {
-              margin: 0 .08rem;
+              margin: 0 .03rem;
+              font-size: .13rem;
             }
           }
           .img {
@@ -173,13 +196,13 @@ html, body, #root, .container2 {
             box-shadow: 0 0 .1rem rgba(100, 100, 100, .1);
             border-radius: .05rem;
             margin-top: .2rem;
-            padding: 0 .2rem;
             h5 {
               font:0.15rem/0.3rem "";
               color: darkgray;
-              margin-top: 10px;
+              margin: .1rem 0 0 .17rem;
             }
             ul {
+              padding: 0 .24rem;
               margin-top: .2rem;
               display: flex;
               justify-content: space-between;
@@ -189,6 +212,7 @@ html, body, #root, .container2 {
                 p {
                   margin-top:.1rem;
                   color: darkgray;
+                  font-size: .12rem;
                 }
               }
             }       
@@ -198,14 +222,14 @@ html, body, #root, .container2 {
             height: 122px;
             background:url("../../assets/morebg.png") no-repeat;
             margin-top: .2rem;
-            padding: 0  .2rem;
             h5 {
               font:0.15rem/0.3rem "";
               color: darkgray;
-              margin-top: 10px;
+              margin: .1rem 0 0 .17rem;
             }
             ul {
-              margin-top: .1rem;
+              padding: 0 .24rem;
+              margin-top: .18rem;
               display: flex;
               justify-content: space-between;
               li {
@@ -213,10 +237,11 @@ html, body, #root, .container2 {
                 text-align: center;
                 span {
                   color: darkgray;
-                  font-size: .24rem;
+                  font-size: .2rem;
                 }
                 p {
                   color: darkgray;
+                  font-size: .12rem;
                 }
               }
             }
