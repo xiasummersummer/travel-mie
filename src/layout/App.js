@@ -30,7 +30,7 @@ function App() {
           </NavLink>
           <NavLink to = "/live">
             <span className="iconfont-find"></span>
-            <p>直播</p>
+            <p>发现</p>
           </NavLink>
           <NavLink to = "/user">
             <span className="iconfont-user"></span>

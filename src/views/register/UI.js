@@ -41,6 +41,9 @@ class Com extends React.Component {
   //   },1000)
   //   this.props.register()
   // }
+  read () {
+    
+  }
   render(){
     console.log(this.props)
     return (
@@ -75,7 +78,7 @@ class Com extends React.Component {
             密码由8-16位数据、字母或符号组成，至少含有两种以上的字符。
           </div>
           <div className="checkboxinfo">
-            <span className="iconfont iconduoxuankuang square"></span>
+            <span className="iconfont iconduoxuankuang square" onClick={this.read.bind(this)}></span>
             <span className="agree">已阅读并同意 <a href="##">《咩咩旅行服务协议》</a>  和 <a href="##">《隐私政策》</a></span>
           </div>
           <div className="reg">

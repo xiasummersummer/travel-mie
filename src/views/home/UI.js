@@ -25,7 +25,12 @@ class Com extends Component {
     //   console.log(res.data)
     // })
   }
-
+  gosenic(){
+    this.props.history.push('/scenic')
+  }
+  gofood(){
+    this.props.history.push('/food')
+  }
   render () {
     // console.log(store)
     // console.log(store.getState())
@@ -50,7 +55,7 @@ class Com extends Component {
         <div className="homenav">
           <div className="scenic">
             <img src="" alt=""/>
-            <p>景色</p>
+            <p onClick={this.gosenic.bind(this)}>景色</p>
           </div>
           <div className="stay">
             <img src="" alt=""/>
@@ -62,7 +67,7 @@ class Com extends Component {
           </div>
           <div className="food">
             <img src="" alt=""/>
-            <p>美食</p>
+            <p onClick={this.gofood.bind(this)}>美食</p>
           </div>
         </div>
         <div className="tripnews">

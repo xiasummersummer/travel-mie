@@ -97,7 +97,7 @@ html, body, #root, .box, .container2 {
           border-left: 1px solid #ccc;
           float: left;
           @include text-color(#666);
-          font-size:.18rem;
+          font-size:.14rem;
           line-height: .26rem;
           text-indent: .1rem;
         }
@@ -126,8 +126,8 @@ html, body, #root, .box, .container2 {
           margin-left: .08rem;
         }
         .closeeye {
-          float: left;
-          margin-left: .1rem;
+          float: right;
+          margin-right: .2rem;
           margin-top: .15rem;
           }
       }
