@@ -7,13 +7,10 @@ import '@/views/css/ticket.scss';
 
 const checkArr = [
   {
-    txt:'checkbox1',
+    txt:'随时退换',
   },
   {
-    txt:'checkbox2',
-  },
-  {
-    txt:'checkbox3',
+    txt:'随时退换1',
   }
 ]
 
@@ -30,18 +27,18 @@ class Com extends React.Component {
     }
   }
 
-  checkClick (index) {  // 这是我写的 
-    this.setState({
-      ['check' +index]: !this.state['check' +index]
-    })
-  }    //这是我写的
+  checkClick (e) {
+    
+      e.target.onoff = !e.target.onoff
+
+    console.log(this.refs.check1.checked)
+  }
 
   componentDidMount () {
-    // for(let i in this.refs){   // 这是我写的 
-    //   this.setState({
-    //     i: false
-    //   }) // 这是我写的 
-    // }
+    for(let i in this.refs){
+      console.log(this.refs[i])
+      this.refs[i] = false
+    }
     let d1 = new Date();
     let Today = d1;
     let time1 = Today.toLocaleDateString();
@@ -82,25 +79,20 @@ class Com extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="humanticketbox">
+          <div className="humanticket">
             <div className="htprice">
-              <span className="hticket">成人票</span>
+              <span>成人票</span>
               <div className="price">
                 ¥120
               </div>
             </div> 
             <div className="checkinfo">
+            
              {
-               checkArr.map((item, index) =>{
-                 return (     // 这是我写的 
-                  <label key = { index} className = { this.state['check'+index] ? 'iconfont iconduoxuankuang2' : 'iconfont iconduoxuankuang' }  htmlFor = { 'checkbox'+ (index +1) }  > <input ref={ 'check' +index}  onClick = { this.checkClick.bind(this,index) } type = 'checkbox' id = { 'checkbox' + (index +1) } />{ item.txt }</label>  // 这是我写的 
-                 )
-               }
-               
-               )
+              
              }
               <div className="timereset"></div>
-              <span>随时退票111</span>
+              <span>随时退票</span>
             </div>
           </div>
         </div>

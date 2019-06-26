@@ -16,6 +16,7 @@ ReactDOM.render(
       <Route path = '/food' component = { Style } />
       <Route path = '/scenic' component = { Style } />
       <Route path = '/homesearch' component = { Style } />
+      <Route path = '/stratesearch' component = { Style } />
       <Route path = '/sensedetail' component = { Style } />
       <Route path = '/ticket' component = { Style } />
       <Route path = '/login' component = { Style } />

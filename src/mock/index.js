@@ -13,18 +13,20 @@ for(var i = 0; i < 10; i++){
 console.log(bannerlist)
 return bannerlist
 }
-// let homenewslist = [];
-// let homelivelist = [];
-// const getHomenewslist = function () {
-//   // let item = {
-//   //   id: 100,
-//   //   type: 1,
-//   //   'title|2': '旅游去哪里好'
-//   // }
-//   // console.log(item)
-//   // homenewslist.push(item)
-//   // return homenewslist
-// }
+
+let stratesearchlist = [];
+const getstrasearchlist = function () {
+  for(var i = 0; i<8;i++){
+    var item={
+      id:i,
+      search:["我是搜索历史"+ i]
+    }
+    stratesearchlist.push(item)
+  }
+  stratesearchlist.length = 8;
+  return stratesearchlist
+}
+console.log(stratesearchlist)
 // const getHomelivelist = function(){
 //   for (var i = 0; i < 3; i++) {
 //     var item = {
@@ -39,6 +41,6 @@ return bannerlist
 //   console.log(homelivelist)
 //   return homelivelist
 // }
-// Mock.mock('http://www.daxunxun.com/test', 'get', getHomenewslist)
+Mock.mock('http://www.daxunxun.com/stratesearch', 'get', getstrasearchlist)
 // Mock.mock('http://www.daxunxun.com/live', 'get', getHomelivelist)
 Mock.mock('http://www.daxunxun.com/banner','get',getBanner)

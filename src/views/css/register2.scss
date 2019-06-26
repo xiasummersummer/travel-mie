@@ -21,8 +21,9 @@ html, body, #root, .box, .container2 {
         text-align: center;
         line-height:.4rem;
         font-size: .18rem;
+        letter-spacing: .025rem;
         margin-left: -.3rem;
-        @include text-color(#333);
+        @include text-color(#000);
       }
     }
     .registerinfo{
@@ -58,6 +59,7 @@ html, body, #root, .box, .container2 {
           @include rect(70%, .58rem);
           border: none;
           text-indent: .1rem;
+          @include text-color(#999);
           line-height: .58rem;
         }
         .onreg {
@@ -71,14 +73,15 @@ html, body, #root, .box, .container2 {
         border-bottom: 1px solid #ccc;
         input {
           @include rect(65%, .58rem);
+          @include text-color(#999);
           float: left;
           margin-left: .08rem;
         }
         .getcode {
           margin-top: .15rem;
-          border-left: 1px solid #ccc;
+          border-left: 1px dotted #ccc;
           float: left;
-          @include text-color(#666);
+          @include text-color(#333);
           font-size:.14rem;
           line-height: .26rem;
           text-indent: .1rem;
@@ -90,6 +93,7 @@ html, body, #root, .box, .container2 {
         border-bottom: 1px solid #ccc;
         input {
           @include rect(80%, .58rem);
+          @include text-color(#666);
           margin-left: .08rem;
         }
         .closeeye {
@@ -116,7 +120,11 @@ html, body, #root, .box, .container2 {
       }
       .reg {
         margin-top: .3rem;
-        background:url("../../assets/login.png");
+        // background:url("../../assets/login.png");
+        background:linear-gradient(0deg,rgba(0,212,206,1),rgba(3,222,168,1));
+        border-radius:35px;
+        width:339px;
+        height:38px;
         @include rect(100%, .38rem);
         text-align: center;
         @include text-color(#fff);

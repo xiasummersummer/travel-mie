@@ -7,14 +7,14 @@
 //   @include flexbox();
 //   @include flex-direction(column);
 .footer {
-  @include rect(100%, .5rem);
+  @include rect(100%, .53rem);
   @include background-color(#fff);
   border-top: 1px solid #ccc;
   ul {
     @include flexbox();
     @include rect(100%, 100%);
     a {
-      margin-top: .01rem;
+      margin-top: .02rem;
       @include flex();
       @include flexbox();
       @include rect(auto, 100%);
@@ -23,49 +23,50 @@
       @include align-items();
       @include text-color(#333);
       .iconfont-home{
-        background: url(./assets/footericon6.png) no-repeat -.02rem -.02rem;
+        background: url(./assets/footicon.png) no-repeat 0 -.02rem;
         display: inline-block;
-        @include rect(.18rem,.25rem);
-        background-size:1.18rem, .59rem;
+        text-align: center;
+        @include rect(.22rem,.3rem);
+        background-size:1.25rem, .64rem;
         // background-image:;
         // background-position:;
       }
       &.active {
         .iconfont-home{
-          background-position: 0 -.3rem
+          background-position: 0 -.33rem
         }
       }
       .iconfont-stragety {
-        background: url(./assets/footericon6.png) no-repeat -.24rem -.02rem;
+        background: url(./assets/footicon.png) no-repeat -.26rem -.02rem;
         display: inline-block;
-        @include rect(.26rem,.26rem);
-        background-size:1.18rem, .59rem;
+        @include rect(.28rem,.28rem);
+        background-size:1.25rem, .64rem;
       }
       &.active {
         .iconfont-stragety{
-          background-position: -.25rem -.3rem
+          background-position: -.27rem -.34rem
         }
       }
       .iconfont-find{
-        background: url(./assets/footericon6.png) no-repeat -.51rem -.01rem;
+        background: url(./assets/footicon.png) no-repeat -.56rem -.02rem;
         display: inline-block;
-        @include rect(.36rem,.26rem);
-        background-size:1.18rem, .59rem;
+        @include rect(.38rem,.28rem);
+        background-size:1.25rem, .64rem;        
       }
       &.active {
         .iconfont-find{
-          background-position: -.51rem -.29rem
+          background-position: -.55rem -.33rem
         }
       }
       .iconfont-user{
-        background: url(./assets/footericon6.png) no-repeat -.9rem -.01rem;
+        background: url(./assets/footicon.png) no-repeat -.94rem -.03rem;
         display: inline-block;
-        @include rect(.26rem,.25rem);
-        background-size:1.18rem, .59rem;
+        background-size:1.25rem, .64rem;
+        @include rect(.27rem,.27rem);
       }
       &.active {
         .iconfont-user{
-          background-position: -.9rem -.3rem
+          background-position: -.94rem -.34rem
         }
       }
       &.active {

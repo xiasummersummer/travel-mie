@@ -31,6 +31,9 @@ class Com extends Component {
   gofood(){
     this.props.history.push('/food')
   }
+  gosearch () {
+    this.props.history.push('/homesearch')
+  }
   render () {
     // console.log(store)
     // console.log(store.getState())
@@ -39,7 +42,7 @@ class Com extends Component {
       <div className = "box">
         <header className = "header">
           <div className="searchbox">
-            <div className="searchl ">
+            <div className="searchl" onClick={this.gosearch.bind(this)}>
               <span className="search iconfont icon-sousuo2"></span>
               <span className="write">
                 请输入内容

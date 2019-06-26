@@ -23,20 +23,22 @@ class Com extends React.Component {
   // componentDidMount () {
   //   this.props.getBannerListData()
   // }
-
+  gostratesearch () {
+    this.props.history.push('/stratesearch')
+  }
   render(){
     // console.log(this.props)
     return (
       <div className="strategybox">
         <div className="searchbox">
           <div className="iconfont iconsousuo2 search"></div>
-          <div className="inputbox"><span>Search</span></div>
+          <div className="inputbox" onClick={this.gostratesearch.bind(this)}><span>Search</span></div>
         </div>
         <div className="strategynav">
-          <div className="navl active" onClick={this.offical.bind(this)}>
+          <div className={`navl ${this.state.officalstrage===1?"active":''}`} onClick={this.offical.bind(this)}>
             官方攻略
           </div>
-          <div className="navr" onClick={this.people.bind(this)}>
+          <div className={`navr ${this.state.officalstrage===2?"active":''}`} onClick={this.people.bind(this)}>
             游友攻略
           </div>
         </div>

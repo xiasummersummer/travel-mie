@@ -28,16 +28,17 @@ html, body, #root, .box, .container2 {
       font-size: .2rem;
     }
     .time{
-      @include rect(100%, .6rem);
+      @include rect(100%, auto);
       .usetime {
         line-height: .6rem;
+        @include rect(10%, auto);
         float: left;
-        font-size: .16rem;
+        font-size: .18rem;
       }
       .nowtime {
-        @include rect(70%, .6rem);
+        @include rect(65%, .6rem);
         float: left;
-        margin: .1rem 0 0 .2rem;
+        // margin: .1rem 0 0 .2rem;
         line-height:.6rem;
         ul {@include flexbox()};
         li{
@@ -51,16 +52,11 @@ html, body, #root, .box, .container2 {
         }
       }
     }
-    .humanticketbox{
+    .humanticket{
       @include rect(100%, 1rem);
       .htprice{
-        @include rect(100%, 1rem);
-        .hticket{
-          float: left;
-        }
-        .price{
-          float: right;
-        }
+        @include rect(60%, 1rem);
+        float: left;
       }
       .checkinfo{
         @include rect(30%, 1rem);
@@ -68,6 +64,21 @@ html, body, #root, .box, .container2 {
         input{
           display: none;
         }
+        // .am-list{
+        //   @include rect(100%,100%);
+        //   .am-list-body{
+        //     @include rect(100%,100%);
+        //     .am-list-item{
+        //     @include rect(100%,100%);
+        //     .am-list-line{
+        //     @include rect(100%,100%);
+        //     .am-stepper-input-wrap{
+        //       @include rect(1rem,1rem);
+        //     }
+        //     }
+        //     }
+        //   }
+        // }
       }
     }
   }

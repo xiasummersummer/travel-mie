@@ -6,7 +6,7 @@
  .container2 {
   @include flexbox();
   @include flex-direction(column);
-  .homesearchbox {
+  .stratesearchbox {
     @include flex();
     @include rect(90%, auto);
     margin: 0 auto;
@@ -20,20 +20,22 @@
       // @include background-color(#4f8cff);
       // background:linear-gradient(90deg,#0af,#0085ff);
       .return {
-        @include rect(.5rem, .6rem);
+        @include rect(.4rem, .6rem);
         font-size: .2rem;
       }
-      .searchbox {
-        @include rect(100%, .4rem);
+      .hotsearchbox {
+        @include rect(80%, .3rem);
+        border-radius: .1rem;
         @include flexbox();
-        margin-top: .1rem;
+        overflow:hidden;
+        margin-top: .15rem;
         background-color: #eee;
+        border: 1px solid #ccc;
         .searchl {
-          @include rect(100%, .4rem);
+          @include rect(100%, .3rem);
           @include flexbox();
-          border: 1px solid #ccc;
           div:nth-child(1) {
-            line-height: .4rem;
+            line-height: .3rem;
             margin-left: .1rem;
           }
           input {
@@ -43,12 +45,12 @@
             @include flex();
           }
           .reset{
-            line-height: .4rem;
+            line-height: .3rem;
             margin: 0 .1rem;
           }
         }
       }
-       .ring{
+       .reset{
         text-align:center;
         @include rect(.5rem, .6rem);
       }
