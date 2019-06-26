@@ -108,20 +108,20 @@ html, body, #root, .container2 {
                 color: darkgray;
               }
             }
-            // .userimg {
-            //   height: 130px;
-            //   @include flexbox();
-            //   @include align-items();
-            //   img {
-            //     width: .75rem;
-            //     height: .75rem;
-            //     // float: left;
-            //     margin: 0 .2rem 0 .4rem;
-            //   }
-            //   span {
-            //     font: .25rem/.4rem "";
-            //   }
-            // }
+            .userimg {
+              height: 130px;
+              @include flexbox();
+              @include align-items();
+              img {
+                width: .75rem;
+                height: .75rem;
+                // float: left;
+                margin: 0 .2rem 0 .4rem;
+              }
+              span {
+                font: .25rem/.4rem "";
+              }
+            }
           }
           .footprin {
             @include rect (321px, 84px);
