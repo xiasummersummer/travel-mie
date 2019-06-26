@@ -10,119 +10,174 @@ html, body, #root .bigbox{
   .header {
     overflow: hidden;
     width:100%;
-    height:60px;
-    padding:10px;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
+    height:.64rem;
+    background:url("../../assets/scenicheader.png") no-repeat;
     .goback {
-      line-height: 44px;
-      margin: 0 10px;
+      float: left;
+      padding:.33rem 0 0 .17rem;
+      color:#fff;
     }
-
-    // @include rect(100%, 50px);
-    // .searchbox {
-    //   .back {
-    //     float:left;
-    //     margin-left:15px;
-    //   }
-    //   .search-r {
-    //     float:right;
-    //     width:75%;
-    //     height:30px;
-    //     margin:0 20px 0 0;
-    //     background-color: #efefef;
-    //     .qu {
-    //       float:right;
-    //       margin-right:10px;
-    //     }
-    //   }
-    // }
+    .search {
+      margin: .29rem 0 0 .59rem;
+      width: 2.82rem;
+      height: .27rem;
+      border-radius: .2rem;
+      border: .01rem solid #fff;
+      input {
+        width:2rem;
+        height: .2rem;
+        background: transparent;
+        border: none;
+        color: #fff;
+        // border: .01rem solid #fff;
+      }
+      .first {
+        // margin: .07rem 0 0 .09rem;
+        padding: .3rem 0 0 .09rem;
+        color:#fff;
+      }
+      .cancel {
+        float:right;
+        margin: .03rem .13rem 0 0;
+        font-size: .11rem;
+        color:#fff;
+      }
+    }
   }
   .littlebox {
     @include flex();
     @include rect(100%, auto);
     @include overflow();
     .content {
-      width:100%;
-      margin-top:20px;
+      width:91%;
+      padding-top:.21rem;
+      height:1.7rem;
       display:flex;
       justify-content: space-around;
+      margin:0 auto;
+      border-bottom: .01rem solid #E5E5E5;
       .left {
         img {
-          width:100px;
-          height:100px;
+          width:98px;
+          height:104px;
         }
-        p{
+        .scenictitle{
           text-align: center;
+          font: .12rem/.12rem "";
+          margin-top: .12rem;
+          color:#333333;
         }
       }
     }
     .nav {
-      margin-top:18px;
+      margin-top:.16rem;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      .nav-l {
+        select {
+          border:none;
+          font-size:.11rem;
+          color: #000;
+        }
+      }
     }
     .main {
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      .one {
-        margin:20px 0 0 20px;
-        .img {
-          float:left;
-          img {
-            width:120px;
-            height:120px;
-          }
+      .one{
+        padding:.09rem .14rem;
+        margin:0 .16rem;
+        width:3.43rem;
+        height:1.16rem;
+        margin:0 auto;
+        border-bottom:.01rem solid #ccc;
+        @include flexbox();
+        img{
+         @include rect(.9rem,.9rem);
+         margin-right:.13rem;
         }
-        .explain {
-          padding: 10px;
-          float: right;
-          width: 230px;
-          height: 120px;
-          h5 {
-            display: inline-block;
-            line-height: 35px;
+        .explain1{
+          @include flex();
+          @include flexbox();
+          @include flex-direction(column);
+          .explain1-box{
+            @include flex();
+            @include rect(100%,auto); .scienictitle {
+              font-size:0.12rem;
+            }
+            .ticket{
+              font-size:.12rem;
+              margin-top:.1rem;
+              color:#CCCCCC
+            }
+            .middle {
+              margin: 0 .05rem;
+              color:#CCCCCC
+            }
+            .issue {
+              font-size:.12rem;
+              margin-top:.1rem;
+              color:#CCCCCC
+            }
+
           }
-          span {
-            float:right;
-            margin-right:18px;
+
+          .bottom1{
+            @include rect(100%,.4rem);
+            padding-top:.2rem;
+            .price {
+              font-size:.1rem;
+              color:#CC3333;
+              float:left;
+            }
+            .qi {
+              margin-left:.02rem;
+              font-size:.1rem;
+              color:#CCCCCC;
+              float:left;
+           
+            }
+            .grae {
+              margin-left: .38rem;
+              width:.26rem;
+              height:.15rem;
+              background:#00cccc;
+              float:left;
+              border-radius: .05rem;
+              font-size:.12rem;
+              text-align: center;
+              color:#fff;
+            }
+            .good {
+              float:left;
+              font-size:.12rem;
+              color:#CCCCCC;
+              display: inline-block;
+            }
+            .yue {
+              float:right;
+              font-size:.12rem;
+              color:#CCCCCC;
+            }
           }
-          h6 {
-            line-height: 45px;
-          }
-          p {
-            line-height: 35px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
           }
         }
       }
-    }
+      
+          // h6 {
+          //   line-height: 40px;
+          // }
+          // p {
+          //   line-height: 35px;
+          //   overflow: hidden;
+          //   text-overflow: ellipsis;
+          //   white-space: nowrap;
+          // }
   }
 }
-// .container {
-//   @include flexbox();
-//   @include flex-direction(column);
-//   .box {
-//     @include flex();
-//     @include rect(100%, auto);
-//     @include flexbox();
-//     @include flex-direction(column);
-//     .header {
-//       @include rect(100%, 0.44rem);
-//       @include background-color(#f66);
-//     }
-//     .content {
-//       @include flex();
-//       @include rect(100%, auto);
-//       overflow: auto;
-//     }
-//   }
-// }
+
 
 
 

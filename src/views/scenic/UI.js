@@ -1,5 +1,4 @@
 import React from 'react';
-import { SearchBar } from 'antd-mobile';
 import '@/views/css/scenic.scss'
 
 class Com extends React.Component {
@@ -9,22 +8,26 @@ class Com extends React.Component {
       <div className = "bigbox">
         <header className = "header">
             <span className = "goback iconfont iconfanhuijiantou1"></span>
-            <SearchBar placeholder="Search" style = {{ width:'80%'}} />
+            <div className="search">
+              <span className = "first iconfont iconsousuo1"></span>
+              <input type="text" value = "" />
+              <span className = "cancel">取消</span>
+            </div>
         </header>
           <div className = "littlebox">
           <div>
             <div className ="content">
               <div className = "left">
                 <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217123625997.jpg" alt=""/>
-                <p>大雁塔</p>
+                <p className = "scenictitle">大雁塔</p>
               </div>
               <div className = "left">
                 <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217123625997.jpg" alt=""/>
-                <p>大雁塔</p>
+                <p className = "scenictitle">大雁塔</p>
               </div>
               <div className = "left">
                 <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217123625997.jpg" alt=""/>
-                <p>大雁塔</p>
+                <p className = "scenictitle">大雁塔</p>
               </div>
             </div>
             <div className = "nav">
@@ -53,54 +56,46 @@ class Com extends React.Component {
                 </select>
               </div>
             </div>
-            <div className = "main">
+        <div className = "main">
           <div className = "one">
-            <div className = "img">
-              <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217100347899.jpg" alt=""/>
-            </div>
-            <div className = "explain">
-              <h5>华清池</h5>
-              <span>￥120</span>
-              <h6>推荐指数</h6>
-              <p>距离你416m 西安市华清池附近的得减肥看电视</p>
+            <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217100347899.jpg" alt=""/>
+            <div className = "explain1">
+              <div className = "explain1-box">
+                <h4 className = "scienictitle">西安旅游 西安兵马俑博物馆门票 兵马俑门票兵马俑大门票秦始皇陵</h4>
+                <span className = "ticket">16点前可预订今日票</span>
+                <span className = "middle">|</span>
+                <span className = "issue">平均一分钟出票</span>
+              </div>
+              <div className ="bottom1">
+                <span className = "price">￥120</span>
+                <span className = "qi">起</span>
+                <div className="grae">5分</div>
+                <span className = "good">好极了</span>
+                <span className = "yue">月销3335笔</span>
+              </div>
             </div>
           </div>
           <div className = "one">
-            <div className = "img">
-              <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217100347899.jpg" alt=""/>
+            <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217100347899.jpg" alt=""/>
+            <div className = "explain1">
+              <div className = "explain1-box">
+                <h4 className = "scienictitle">西安旅游 西安兵马俑博物馆门票 兵马俑门票兵马俑大门票秦始皇陵</h4>
+                <span className = "ticket">16点前可预订今日票</span>
+                <span className = "middle">|</span>
+                <span className = "issue">平均一分钟出票</span>
+              </div>
+              <div className ="bottom1">
+                <span className = "price">￥120</span>
+                <span className = "qi">起</span>
+                <div className="grae">5分</div>
+                <span className = "good">好极了</span>
+                <span className = "yue">月销3335笔</span>
+              </div>
             </div>
-            <div className = "explain">
-              <h5>华清池</h5>
-              <span>￥120</span>
-              <h6>推荐指数</h6>
-              <p>距离你416m 西安市华清池附近的得减肥看电视</p>
-            </div>
-          </div>
-          <div className = "one">
-            <div className = "img">
-              <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217100347899.jpg" alt=""/>
-            </div>
-            <div className = "explain">
-              <h5>华清池</h5>
-              <span>￥120</span>
-              <h6>推荐指数</h6>
-              <p>距离你416m 西安市华清池附近的得减肥看电视</p>
-            </div>
-          </div>
-          <div className = "one">
-            <div className = "img">
-              <img src = "http://www.paris-bride.com/uploadfile/2018/1217/20181217100347899.jpg" alt=""/>
-            </div>
-            <div className = "explain">
-              <h5>华清池</h5>
-              <span>￥120</span>
-              <h6>推荐指数</h6>
-              <p>距离你416m 西安市华清池附近的得减肥看电视</p>
-            </div>
-          </div>
-      </div>
           </div>
         </div>
+      </div>
+    </div>
   </div>
     )
   }

@@ -23,7 +23,7 @@ class Com extends React.Component {
             <div>
               <div className="header"></div>
               <div className="usercontent">
-                <div className="userlogo">
+                {/* <div className="userlogo">
                   <div className="top">
                     <span className = "iconfont iconxinxi first"></span>
                     <img src={ userLogo } alt=""/>
@@ -34,14 +34,14 @@ class Com extends React.Component {
                     <p>Angel</p>
                     <span>因为有梦，所以勇敢出发，选择出发，便只顾风雨兼程。</span>
                   </div>
-                </div>
-                {/* <div className="gologin">
+                </div> */}
+                <div className="gologin">
                   <img src= { userLogin } alt=""/>
                   <p>登录后享受更多优惠及服务</p>
                   <div className="loginbtn">
                     <span>登录/注册</span>
                   </div>
-                </div> */}
+                </div>
                 <div className="footprin">
                   <h5>我的足迹</h5>
                   <p>点击生成足迹地图</p>
