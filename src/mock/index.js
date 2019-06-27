@@ -26,23 +26,33 @@ const getstrasearchlist = function () {
   stratesearchlist.length = 8;
   return stratesearchlist
 }
+
 let foodlist = []
 const getFoodlist = function(){
-for(var i = 0; i < 10; i++){
+for(let i = 0; i < 10; i++){
+ let foodbannerlist = [];
+  for (let i=0;i<3;i++ ){
+  foodbannerlist.push([Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '我是第' + i + '张图片')])
+}
+
   var item = {
     id: 'img'+i,
     itemimage: Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '我是第' + i + '张图片'),
+    foodbannerlist,
     alt: Mock.mock('@url()'),
     href: Mock.mock('@url()'),
-    name:'老白家'+`${i}`+'腊汁肉夹馍',
+    name:'老白家'+i+'腊汁肉夹馍',
+    star: 9,
     countnum:'10分',
-    decribe:'山西特色'+`${i}`+'陕西西胜多负少都是对的所是多少安',
+    decribe:'山西特色'+i+'陕西西胜多负少都是对的所是多少安',
     add:'体育场'+i,
-    salenum:'月销99'+i+'+'
+    salenum:'月销99'+i+'+',
+    recomend: []
   }
   foodlist.push(item);
 }
 console.log(foodlist)
+foodlist.length = 10;
 return foodlist
 }
 // console.log(stratesearchlist)
