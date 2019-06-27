@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '@/views/css/food.scss'
-import * as ajax  from '@/api'
 
 class Com extends Component {
   constructor(props){
@@ -11,25 +10,24 @@ class Com extends Component {
   }
   componentDidMount () {
     this.props.getFoodlist();
-    // ajax.getFoodlist().then(res=>{
-    //   // console.log(res.data)
-    //   this.setState({
-    //     foodlists:res.data
-    //   })
-    // })
+  }
+  goreturn () {
+    this.props.history.go(-1)
+  }
+  gofooddetail () {
+    
   }
   render () {
     return (
       <div className="foodBox">
         <div className="foodheader">
-          <span className = "goback iconfont iconfanhuijiantou1"></span>
+          <span className = "goback iconfont iconfanhuijiantou1" onClick={this.goreturn.bind(this)}></span>
           <div className="search">
               <span className = "foodsearch iconfont iconsousuo1"></span>
               <input type="text" placeholder = "请输入内容" />
           </div>
         </div>
         <div className="content">
-          <div>
             <div className = "searchCondition">
               <ul className="foodnav">
                 <li className = "all">全部</li>
@@ -48,23 +46,10 @@ class Com extends Component {
               </ul>
             </div>
             <div className="foodMain">
-              {/* <ul className = "foodDetail">
-                {
-                  foodDetail.map((item, index) => (
-                    <li key = { index } className="foodlist"> 
-                      <img src = { item.img } alt="" className="foodlistimg"/>
-                      <h5 className="">{ item.h5 }</h5>
-                      <span>{ item.span }</span>
-                      <p>{ item.p }</p>
-                    </li>
-                  ))
-                }
-              </ul> */}
-              
               { 
                 this.props.foodlist.map((item,index)=>{
                   return(
-                  <div className="foodlist" key={index}>
+                  <div className="foodlist" onClick={this.gofooddetail.bind(this)} key={index}>
                   <div className="fl-l">
                     <img src={item.itemimage} alt=""/>
                   </div>
@@ -96,8 +81,7 @@ class Com extends Component {
                   )
                 })
               }
-                </div> 
-          </div>
+            </div>
         </div>
       </div>
     )

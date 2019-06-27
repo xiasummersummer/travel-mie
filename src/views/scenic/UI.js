@@ -2,15 +2,18 @@ import React from 'react';
 import '@/views/css/scenic.scss'
 
 class Com extends React.Component {
+  goback () {
+    this.props.history.go(-1)
+  }
   render() {
     console.log(this.props)
     return (
       <div className = "bigbox">
         <header className = "header">
-            <span className = "goback iconfont iconfanhuijiantou1"></span>
+            <span className = "goback iconfont iconfanhuijiantou1" onClick= { this.goback.bind(this) }></span>
             <div className="search">
               <span className = "first iconfont iconsousuo1"></span>
-              <input type="text" value = "" />
+              <input type="text" />
               <span className = "cancel">取消</span>
             </div>
         </header>
@@ -32,28 +35,35 @@ class Com extends React.Component {
             </div>
             <div className = "nav">
               <div className = "nav-l">
-                <select>
+                <span className = "text">全部景点</span>
+                <span className = "nav-tu iconfont iconxiala"></span>
+                {/* <select>
                   <option value="全部景点">全部景点</option>
                   <option value="大雁塔">大雁塔</option>
                   <option value="华清池">华清池</option>
                   <option value="华清池">华清池</option>
-                </select>
+                </select> */}
               </div>
               <div className = "nav-l">
-                <select>
+                <span className = "text">智能排序</span>
+                <span className = "nav-tu iconfont iconxiala"></span>
+
+                {/* <select>
                   <option value="智能排序">智能排序</option>
                   <option value="大雁塔">大雁塔</option>
                   <option value="华清池">华清池</option>
                   <option value="华清池">华清池</option>
-                </select>
+                </select> */}
               </div>
               <div className = "nav-l">
-                <select>
+              <span className = "text">筛选</span>
+                <span className = "nav-tu iconfont iconxiala"></span>
+                {/* <select>
                   <option value="筛选">筛选</option>
                   <option value="大雁塔">大雁塔</option>
                   <option value="华清池">华清池</option>
                   <option value="华清池">华清池</option>
-                </select>
+                </select> */}
               </div>
             </div>
         <div className = "main">

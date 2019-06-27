@@ -7,6 +7,7 @@ import Stratesearch from '@/views/stratesearch'
 import Sensedetail from '@/views/sensedetail'
 import Scenic from '@/views/scenic'
 import Food from '@/views/food'
+import Fooddetail from '@/views/fooddetail'
 import Ticket from '@/views/ticket'
 import '@/register.scss'
 function Detailstyle () {
@@ -18,6 +19,7 @@ function Detailstyle () {
         <Route path = "/stratesearch" component = { Stratesearch }/>
         <Route path = "/scenic" component = { Scenic }/>
         <Route path = "/food" component = { Food }/>
+        <Route path = "/food/fooddetail" component = { Fooddetail }/>
         <Route path = "/sensedetail" component = { Sensedetail }/>
         <Route path = "/ticket" component = { Ticket }/>
         <Route path = "/login" component = { Login }/>

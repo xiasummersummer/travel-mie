@@ -56,31 +56,37 @@ html, body, #root {
   .content {
     @include flex();
     @include flex-direction(column);
-    @include rect(100%,auto);
+    @include rect(90%,auto);
+    margin: 0 auto;
     overflow: auto;
     .searchCondition {
       overflow: hidden;
+      margin-top: .1rem;
+      @include rect(100%, auto);
       .foodnav {
         overflow: hidden;
         text-align: center;
         li {
           margin:5px;
           float:left;
-          border-radius: .03  rem;
           &.all {
             @include rect(.39rem, .18rem);
-            @include background-color(#00cccc)
+            line-height: .18rem;
+            font-size: .12rem;
+            background: url('../../assets/bg.png') no-repeat;
+            @include text-color(#fff);
           }
         }
       }
     }
   }
   .foodMain {
-    @include rect(90%, auto);
     margin: .14rem auto 0;
    .foodlist {
     @include rect(100%, auto);
     @include flexbox();
+    border-bottom: 1px solid #eee;
+    padding: .1rem 0;
     margin-bottom: .1rem;
      .fl-l {
         @include rect(.9rem, .9rem);

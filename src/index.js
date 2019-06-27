@@ -14,6 +14,7 @@ ReactDOM.render(
       <Switch>
       <Route path = '/register' component = { Style } />
       <Route path = '/food' component = { Style } />
+      <Route path = '/food/fooddetail' component = { Style } />
       <Route path = '/scenic' component = { Style } />
       <Route path = '/homesearch' component = { Style } />
       <Route path = '/stratesearch' component = { Style } />
