@@ -46,11 +46,11 @@ export const getHomePro = () => {
 export const getstrateSearch = () => {
   return ajax.get('/stratesearch')
 }
-export const login = (params) => {
-  return ajax.post('/users/login', params)
-}
 export const getFoodlist= () => {
   return ajax.get('/foodlist')
+}
+export const login = (params) => {
+  return ajax.post('/users/login', params)
 }
 
 
