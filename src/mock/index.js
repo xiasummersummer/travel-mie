@@ -26,7 +26,6 @@ const getstrasearchlist = function () {
   stratesearchlist.length = 8;
   return stratesearchlist
 }
-
 let foodlist = []
 const getFoodlist = function(){
 for(var i = 0; i < 10; i++){
@@ -65,3 +64,4 @@ Mock.mock('http://www.daxunxun.com/stratesearch', 'get', getstrasearchlist)
 Mock.mock('http://www.daxunxun.com/foodlist', 'get', getFoodlist)
 // Mock.mock('http://www.daxunxun.com/live', 'get', getHomelivelist)
 Mock.mock('http://www.daxunxun.com/banner','get',getBanner)
+Mock.mock('http://www.daxunxun.com/foodlist', 'get', getFoodlist)

@@ -52,3 +52,6 @@ export const getFoodlist= () => {
 export const login = (params) => {
   return ajax.post('/users/login', params)
 }
+
+
+
