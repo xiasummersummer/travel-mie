@@ -92,7 +92,7 @@ html, body, #root, .container2 {
             p {
               font-size: .1rem;
               line-height: .1rem;
-              color: darkgray;
+              color: #7E7E7E;
               margin-top: .16rem;
             }
             .loginbtn {
@@ -131,12 +131,12 @@ html, body, #root, .container2 {
             background:url("../../assets/fly.png") no-repeat;
             h5 {
               font:0.15rem/0.3rem "";
-              color: darkgray;
+              color: #050505;
               margin: .2rem 0 0 .17rem;
             }
             p {
               font:0.12rem/0.2rem "";
-              color: darkgray;
+              color: #777777;
               margin-left: .17rem;
             }
           }
@@ -148,7 +148,7 @@ html, body, #root, .container2 {
             background:url("../../assets/usertravels.png") no-repeat;
             h5 {
               font:0.15rem/0.3rem "";
-              color: darkgray;
+              color: #050505;
               margin: .1rem 0 0 .17rem;
             }
             .usershare {
@@ -168,27 +168,32 @@ html, body, #root, .container2 {
             }
             p {
               text-align: center;
-              font: .01rem/.1rem "";
+              font: .12rem/.1rem "";
               margin-top: .14rem;
-              color: darkgray;
+              color:#050505;
             }
           }
           .usertip {
             text-align: center;
             padding-top: .16rem;
             color: darkgray;
+            .te {
+              color:#E5E5E5;
+              font-size: .01rem;
+            }
             span {
               margin: 0 .03rem;
               font-size: .13rem;
+              color:#666666;
             }
           }
-          .img {
-            float: right;
-            margin-top: -0.29rem;
-            img {
-              margin-right: .05rem;
-            }
-          }
+          // .img {
+          //   float: right;
+          //   margin-top: -0.29rem;
+          //   img {
+          //     margin-right: .05rem;
+          //   }
+          // }
           .myorder {
             width: 3.2rem;
             height: 1.23rem;
@@ -198,7 +203,7 @@ html, body, #root, .container2 {
             margin-top: .2rem;
             h5 {
               font:0.15rem/0.3rem "";
-              color: darkgray;
+              color: #050505;
               margin: .1rem 0 0 .17rem;
             }
             ul {
@@ -211,7 +216,7 @@ html, body, #root, .container2 {
                 text-align: center;
                 p {
                   margin-top:.1rem;
-                  color: darkgray;
+                  color: #878787;
                   font-size: .12rem;
                 }
               }
@@ -224,7 +229,7 @@ html, body, #root, .container2 {
             margin-top: .2rem;
             h5 {
               font:0.15rem/0.3rem "";
-              color: darkgray;
+              color: #050505;
               margin: .1rem 0 0 .17rem;
             }
             ul {
@@ -236,11 +241,11 @@ html, body, #root, .container2 {
                 float: left;
                 text-align: center;
                 span {
-                  color: darkgray;
+                  color: #666666;
                   font-size: .2rem;
                 }
                 p {
-                  color: darkgray;
+                  color: #878787;
                   font-size: .12rem;
                 }
               }

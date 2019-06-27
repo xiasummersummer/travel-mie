@@ -2,8 +2,8 @@ import React from 'react';
 import '@/views/css/user.scss';
 import userLogo from '@/assets/logo.png';
 import userAdd from '@/assets/useradd.png';
-import userPhoto from '@/assets/userphoto.png';
-import userPhoto1 from '@/assets/userphoto1.png';
+// import userPhoto from '@/assets/userphoto.png';
+// import userPhoto1 from '@/assets/userphoto1.png';
 import userLogin from '@/assets/userlogin.png';
 import One from '@/assets/one.png';
 import Two from '@/assets/two.png';
@@ -54,20 +54,20 @@ class Com extends React.Component {
                   </div>
                   <p>用照片记录旅行的小技巧</p>
                   <div className="usertip">
-                    <span>|</span>
+                    <span className = "te">|</span>
                     <span>笔记</span>
-                    <span>|</span>
+                    <span className = "te">|</span>
                     <span>游记</span>
-                    <span>|</span>
+                    <span className = "te">|</span>
                     <span>问答</span>
-                    <span>|</span>
+                    <span className = "te">|</span>
                     <span>点评</span>
-                    <span>|</span>
+                    <span className = "te">|</span>
                   </div>
-                  <div className="img">
+                  {/* <div className="img">
                     <img src={ userPhoto } alt=""/>
                     <img src={ userPhoto1 } alt=""/>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="myorder">
                   <h5>我的订单</h5>

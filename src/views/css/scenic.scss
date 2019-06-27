@@ -14,7 +14,7 @@ html, body, #root .bigbox{
     background:url("../../assets/scenicheader.png") no-repeat;
     .goback {
       float: left;
-      padding:.33rem 0 0 .17rem;
+      padding:.3rem 0 0 .17rem;
       color:#fff;
     }
     .search {
@@ -60,6 +60,7 @@ html, body, #root .bigbox{
         img {
           width:98px;
           height:104px;
+          border-radius: .05rem;
         }
         .scenictitle{
           text-align: center;
@@ -70,16 +71,31 @@ html, body, #root .bigbox{
       }
     }
     .nav {
-      margin-top:.16rem;
-      display: flex;
+      margin:.16rem 0 .08rem 0;
+      @include flexbox();
       flex-direction: row;
       justify-content: space-around;
+      text-align: center;
       .nav-l {
-        select {
-          border:none;
+        @include flex();
+        align-items:center;
+        text-align: center;
+        // justify-content: space-around;
+        width:.7rem;
+        height:.16rem;
+        line-height: .16rem;
+        .text {
           font-size:.11rem;
-          color: #000;
+          color:#000000;
         }
+          .nav-tu {
+            font-size: .1rem;
+          }
+        // select {
+        //   border:none;
+        //   font-size:.11rem;
+        //   color: #000;
+        // }
       }
     }
     .main {
@@ -140,7 +156,7 @@ html, body, #root .bigbox{
            
             }
             .grae {
-              margin-left: .38rem;
+              margin: 0 .03rem 0 .3rem;
               width:.26rem;
               height:.15rem;
               background:#00cccc;
