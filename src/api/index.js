@@ -49,3 +49,8 @@ export const getstrateSearch = () => {
 export const login = (params) => {
   return ajax.post('/users/login', params)
 }
+export const getFoodlist= () => {
+  return ajax.get('/foodlist')
+}
+
+
