@@ -14,7 +14,6 @@ class Com extends Component {
   }
   componentDidMount () {
     this.props.getBannerListData()
-    this.props.getLivedata()
     // this.props.getProlistData()
     // axios.get('http://www.daxunxun.com/banner').then(res=>{
     //   console.log(res.data)
@@ -46,7 +45,7 @@ class Com extends Component {
             <div className="searchl" onClick={this.gosearch.bind(this)}>
               <span className="search iconfont icon-sousuo2"></span>
               <span className="write">
-                请输入内容
+                测试
               </span>
               <span className="reset">取消</span>
             </div>
@@ -54,26 +53,8 @@ class Com extends Component {
           </div>
         </header>
         <div className = "content">
-        <Homebanner homebannerlist = {this.props.homebannerlist}/>
+        {/* <Homebanner homebannerlist = {this.props.homebannerlist}/> */}
         {/* <Homeprolist homeprolist = {this.props.homeprolist}/> */}
-        <div className="homenav">
-          <div className="scenic">
-            <span className="iconfont iconjingdian"></span>
-            <p onClick={this.gosenic.bind(this)}>景色</p>
-          </div>
-          <div className="stay">
-            <span className="iconfont iconzhusu"></span>
-            <p>住宿</p>
-          </div>
-          <div className="culture">
-            <span className="iconfont iconmeishi1"></span>
-            <p>文化</p>
-          </div>
-          <div className="food">
-            <span className="iconfont iconwenhua"></span>
-            <p onClick={this.gofood.bind(this)}>美食</p>
-          </div>
-        </div>
         <div className="tripnews">
           <div className="tnl">旅游头条</div>
           <div className="newcont">
@@ -88,17 +69,22 @@ class Com extends Component {
             直播
           </div>
           <ul className="locklive">
-            {this.props.liveimglist.map((item,index)=>{
-              return (
-                <li key={index}>
-                  <img src={item.itemimage} alt=""/>
-                  <p>{item.name}</p>
-                </li>
-              )
-            })}
+            <li>
+              <img src="" alt=""/>
+              <p>1</p>
+            </li>
+            <li>
+              <img src="" alt=""/>
+              <p>2</p>
+            </li>
+            <li>
+              <img src="" alt=""/>
+              <p>3</p>
+            </li>
           </ul>
           <div className="livadv">
         <Homebanner homebannerlist = {this.props.homebannerlist}/>
+            
           </div>
         </div>
         <div className="hotrecommend">

@@ -18,9 +18,9 @@ function Detailstyle () {
         <Route path = "/homesearch" component = { Homesearch }/>
         <Route path = "/stratesearch" component = { Stratesearch }/>
         <Route path = "/scenic" component = { Scenic }/>
-        <Route path = "/food" component = { Food }/>
         <Route path = "/food/fooddetail" component = { Fooddetail }/>
-        <Route path = "/sensedetail" component = { Sensedetail }/>
+        <Route path = "/food" component = { Food }/>
+        <Route path = "/sensedetail/:id" component = { Sensedetail }/>
         <Route path = "/ticket" component = { Ticket }/>
         <Route path = "/login" component = { Login }/>
       </Switch>

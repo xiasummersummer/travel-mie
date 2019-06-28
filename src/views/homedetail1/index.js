@@ -7,8 +7,7 @@ import * as ajax  from '@/api'
 const mapStateToProps = (state) =>({
   homebannerlist: state.home.homebannerlist,
   homeprolist: state.home.homeprolist,
-  hometestdata: state.home.hometestdata,
-  liveimglist:state.home.liveimglist
+  hometestdata: state.home.hometestdata
 })
 const mapDispatchToProps = (dispatch)=>{
  return {
@@ -28,15 +27,6 @@ const mapDispatchToProps = (dispatch)=>{
       })
     })
   },
-  getLivedata(){
-    ajax.getLiveimglist().then(res => {
-      dispatch({
-        type: 'changeliveimglist',
-        data: res.data
-      })
-      console.log(res.data)
-    })
-  }
   // getProlistData () {
   //   ajax.getHomePro().then(res => {
   //     console.log(res.data)

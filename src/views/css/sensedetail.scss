@@ -7,17 +7,24 @@ html, body, #root, .box, .container2 {
   .detailbox {
     @include rect(100%, auto);
     .detailtop{
-      @include rect(100%, .4rem);
+      @include rect(100%, .64rem);
+      background:linear-gradient(0deg,rgba(0,212,206,1),rgba(3,222,168,1));
       .detailleft{
         margin-left: .1rem;
-        font-size: .18rem;
+        font-size: .2rem;
+        padding-top:.32rem;
         float: left;
-        line-height: .4rem;
+        line-height: .2rem;
+        @include text-color(#fff);
+        
       }
       .detitle{
+        margin-top: .34rem;
         float: left;
-        @include rect(80%,.4rem);
-        line-height:.4rem;
+        @include rect(80%,.14rem);
+        font-size: .14rem;
+        @include text-color(#fff);
+        line-height:.14rem;
         text-align: center;
       }
     }
@@ -29,39 +36,77 @@ html, body, #root, .box, .container2 {
       @include rect(95%, auto);
       margin: 0 auto;
       .sensename{
-        @include rect(100%, .4rem);
+        @include rect(100%, .5rem);
         font-size: .16rem;
         line-height: .4rem;
-      }
-      .recommendstar{
-        @include rect(100%, .4rem);
-        line-height: .4rem;
-        span {
-          float: left;
+        @include flexbox();
+        border-bottom: 1px solid #ccc;
+        .sensenameinfo {
+          @include rect(70%, auto);
+          .sensetitle {
+            @include rect(100%, .2rem);
+            font-size:15px;
+            line-height:.2rem;
+            font-family:PingFang-SC-Medium;
+            font-weight:500;
+            color:rgba(0,0,0,1);
+          }
+          .telltip {
+            @include rect(100%, .15rem);
+            @include flexbox();
+            margin-top:.1rem;
+            span{
+            //  @include rect(30%, .15rem);
+              font-size:12px;
+              line-height:.15rem;
+              color:rgba(204,204,204,1);
+            }
+            em {
+              @include text-color(#ccc);
+              line-height:.12rem;
+              font-size:12px;
+              margin: 0 .1rem;
+            }
+          }
         }
-        .starbox {
-          float: left;
-          margin-left: .1rem;
+        .recommend{
+          @include rect(25%, .4rem);
+          @include text-color(#00cccc);
+          border-left: 1px solid #ccc;
+          text-indent:.05rem;
+          .rencount {
+            @include rect(100%, .14rem);
+            text-align: center;
+            line-height: .14rem;
+          }
+          .renum {
+            @include rect(100%, .14rem);
+          }
         }
       }
       .senseinfo{
         @include rect(100%, auto);
-        margin-top: .05rem;
+        margin-top: .1rem;
         .sensetitle{
-          font-size: .18rem;
+          font-size: .14rem;
 
         }
         .infobox {
-          margin-top: .05rem;
+          padding: .05rem 0 .1rem;
+          border-bottom: 1px solid #ccc;
           .address{
           // @include rect(100%, .21rem);
             span {
-              // &:nth-child(1){
-              //   color:#888;
-              // }
-              &:nth-child(2){
-                margin: 0 .2rem 0 .1rem;
+              &:nth-child(1){
+                @include text-color(#00cccc);
               }
+              &:nth-child(2){
+              @include text-color(#ccc);
+              margin: 0 .2rem 0 .1rem;
+              }
+              &:nth-child(3){
+                @include text-color(#ccc);
+                }
               &:nth-child(4){
                 margin-left: 1rem;
                 display: inline-block;
@@ -76,52 +121,143 @@ html, body, #root, .box, .container2 {
           .tell{
             span{
               &:nth-child(1){
-                color:#888;
+                @include text-color(#00cccc);                
               }
               &:nth-child(2){
+                @include text-color(#ccc);
                 margin: 0 .2rem 0 .1rem;
               }
+              &:nth-child(3){
+                @include text-color(#ccc);
+                }
             }
           }
           .time{
             span{
               &:nth-child(1){
-                color:#888;
+                @include text-color(#00cccc);
               }
               &:nth-child(2){
+                @include text-color(#ccc);
                 margin: 0 .2rem 0 .1rem;
               }
+              &:nth-child(3){
+                @include text-color(#ccc);
+                }
             }
           }
           .ticket{
             span{
               &:nth-child(1){
-                color:#888;
+                @include text-color(#00cccc);
               }
               &:nth-child(2){
+                @include text-color(#ccc);
                 margin: 0 .2rem 0 .1rem;
               }
+              &:nth-child(3){
+                @include text-color(#ccc);
+                }
               &:nth-child(4){
                 margin-left: 1.6rem;
                 display: inline-block;
-                @include rect(.6rem, .25rem);
+                @include rect(.7rem, .16rem);
                 text-align: center;
-                line-height: .25rem;
-                border-radius: .1rem;
-                background-color:#ccc;
+                line-height: .16rem;
+                border-radius: .04rem;
+                font-size: .12rem;
+                @include background-color(#00cccc);
                 color: #fff;
+                .iconyoujian {
+                  @include text-color(#fff);
+                  font-size: .1rem;
+                }
               }
             }
           }
         }
       }
       .introuduce{
-        margin-top: .2rem;
+        margin: .1rem 0 .05rem;
+        border-bottom: 1px solid #ccc;
         .intit {
-          @include rect(100%, .4rem);
+          @include rect(100%, .3rem);
           font-size: .18rem;
         }
-        .sensemsg{}
+        .sensemsg{
+          @include text-color(#ccc);
+          line-height: .14rem;
+          font-size: .12rem;
+          margin-bottom: .05rem;
+        }
+      }
+      .visitortalk {
+        margin: .1rem 0 .05rem;
+        border-bottom: 1px solid #ccc;
+        .visitortitle {
+          @include rect(100%, .3rem);
+          font-size: .18rem;
+        }
+        .visitorcontent {
+          @include text-color(#ccc);
+          .userinfo {
+            img {}
+            .username{
+            }
+          }
+          .usercontent{
+            .talkabout{
+              // @include rect(100%, 1.2rem);
+              overflow : hidden;
+              height:.42rem;
+              position:relative;
+              transition:.3s;
+            }
+            .talkabout::after{
+              content:' ... ';
+              position:absolute;
+              bottom:0;
+              padding:0 .02rem;
+              right:.05rem;
+              // background:linear-gradient(transparent , #fff 70%, #fff);
+              background:#fff;
+            }
+            .display{
+              @include text-color(#00cccc);
+              font-size: .12rem;
+            }
+          }
+        }
+      }
+      .hopecomments {
+          @include rect(100%, .26rem);
+          line-height:.26rem;
+        .hl {
+          @include background-color(#00cccc);      
+          @include rect(2.33rem,.26rem);
+          float: left;
+          @include text-color(#fff);
+          @include flexbox();
+          border-radius: .15rem;
+          .iconxie {
+            margin-left:.1rem;
+            font-size: .12rem;
+          }
+          .gowrite {
+            margin-left:.1rem;
+          }
+        }
+        .clickxin {
+          float: left;
+          margin-left:.1rem;
+          line-height:.26rem;
+          @include text-color(#00cccc);      
+          @include rect(30%,.26rem);
+          .iconxin {}
+          .like {
+
+          }
+        }
       }
     }
   }

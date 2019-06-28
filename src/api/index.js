@@ -49,9 +49,22 @@ export const getstrateSearch = () => {
 export const getFoodlist= () => {
   return ajax.get('/foodlist')
 }
+export const getSenselist= () => {
+  return ajax.get('/senselist')
+}
+export const getSenseDetail= (id) => {
+  return ajax.get('sensedetail/'+ id)
+}
+export const getSensehotlist= () => {
+  return ajax.get('/sensehotlist')
+}
+export const getLiveimglist= () => {
+  return ajax.get('/liveimgs')
+}
 export const login = (params) => {
   return ajax.post('/users/login', params)
 }
+
 
 
 

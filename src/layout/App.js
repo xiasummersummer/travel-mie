@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect, NavLink} from 'react-router-dom';
 import Home from '@/views/home';
+import Homedetail from '@/views/homedetail1';
 import Live from '@/views/live';
 import Strategy from '@/views/strategy';
 import User from '@/views/user';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="container">
       <Switch>
+        <Route path= "/home/homedetail" component = {Homedetail}/>
         <Route path= "/home" component = {Home}/>
         <Route path= "/live" component = {Live}/>
         <Route path= "/strategy" component = {Strategy}/>
