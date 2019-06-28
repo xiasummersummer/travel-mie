@@ -9,6 +9,7 @@ import Scenic from '@/views/scenic'
 import Food from '@/views/food'
 import Fooddetail from '@/views/fooddetail'
 import Ticket from '@/views/ticket'
+import All from '@/views/all'
 import '@/register.scss'
 function Detailstyle () {
   return (
@@ -22,6 +23,7 @@ function Detailstyle () {
         <Route path = "/food" component = { Food }/>
         <Route path = "/sensedetail/:id" component = { Sensedetail }/>
         <Route path = "/ticket" component = { Ticket }/>
+        <Route path = "/all" component = { All }/>
         <Route path = "/login" component = { Login }/>
       </Switch>
     </div>

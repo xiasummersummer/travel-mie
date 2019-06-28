@@ -1,0 +1,133 @@
+@import '@/lib/reset.scss';
+
+html, body, #root {
+  @include rect (100%, 100%);
+}
+
+.allbox {
+  @include flexbox();
+  @include flex-direction(column);
+  @include rect (100%,100%);
+  .allheader {
+    @include rect (100%, .64rem);
+    display: flex;
+    padding: 0 .25rem;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    align-items: center;
+    background:linear-gradient(0deg,rgba(0,212,206,1),rgba(3,222,168,1));
+    .goback {
+      color:#fff;
+      font-size: .19rem;
+    }
+    .middle {
+      font-size: .16rem;
+      color: #fff;
+    }
+  }
+  .allcontent {
+    @include flex(1);
+    @include flex-direction(column);
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    .allnav {
+      @include rect (100%, .5rem);
+      padding: 0 .25rem;
+      display: flex;
+      @include flex-direction(row);
+      align-items: center;
+      @include justify-content(space-between);
+    }
+    .alldetail {
+      @include padding(0 .15rem);
+      @include rect (100%, 100%);
+      background: #fff;
+      .userdetail {
+        margin-top: .15rem;
+        border-bottom: .001rem solid #666;
+        .alllogo {
+          border-radius:.5rem;
+          @include rect (.5rem, .5rem)
+        }
+        .username {
+          font-size: .14rem;
+          @include color(#000);
+          margin: 0 .04rem;
+        }
+        .usergrade {
+          font-size: .12rem;
+          color: #6666;
+        }
+        .focus {
+          @include flexbox();
+          @include flex-direction(row);
+          align-items: center;
+          @include rect (.5rem, .3rem);
+          @include border-radius(.1rem);
+          float:right;
+          text-align: center;
+          @include margin(.1rem);
+          background:#00CCCC;
+          .alladd {
+            font-size: .12rem;
+            color: #fff;
+          }
+          .alltext {
+            font-size: .12rem;
+            color: #fff;
+          }
+        }
+        .card {
+          font-size: .15rem;
+          @include color(#000);
+          margin: .1rem 0;
+        }
+        .usershare {
+          width: 100%;
+          overflow: hidden;
+          white-space: wrap;
+          text-overflow:ellipsis;
+          color:#ccc;
+        }
+        button {
+          background: none;
+          border: none;
+          color: #000;
+        }
+        .shareimg {
+          @include flexbox();
+          @include flex-direction(row);
+          @include justify-content(space-around);
+          align-items: center;
+          width: 100%;
+          height: 1rem;
+          .tu {
+            img {
+              width: .9rem;
+              height: .9rem;
+            }
+          }
+        }
+        .allbottom {
+          overflow: hidden;
+          padding: .05rem 0;
+          .time {
+            float: left;
+            color:#ccc;
+          }
+          .allright {
+            float: right;
+            .other{
+              margin: 0 .1rem;
+              color:#ccc;
+            }
+            .num {
+              color:#ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+}

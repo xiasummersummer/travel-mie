@@ -2,8 +2,6 @@ import React from 'react';
 import '@/views/css/user.scss';
 import userLogo from '@/assets/logo.png';
 import userAdd from '@/assets/useradd.png';
-// import userPhoto from '@/assets/userphoto.png';
-// import userPhoto1 from '@/assets/userphoto1.png';
 import userLogin from '@/assets/userlogin.png';
 import One from '@/assets/one.png';
 import Two from '@/assets/two.png';
