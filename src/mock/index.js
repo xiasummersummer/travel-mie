@@ -1,4 +1,5 @@
 const Mock = require('mockjs');
+
 let bannerlist = []
 const getBanner = function(){
 for(var i = 0; i < 10; i++){
@@ -26,6 +27,7 @@ const getstrasearchlist = function () {
   stratesearchlist.length = 8;
   return stratesearchlist
 }
+
 let foodlist = []
 const getFoodlist = function(){
 for(var i = 0; i < 10; i++){
@@ -45,7 +47,46 @@ for(var i = 0; i < 10; i++){
 console.log(foodlist)
 return foodlist
 }
-// console.log(stratesearchlist)
+
+
+const getAlldetail = function () {
+  let alldetail = [];
+  for (var i = 0; i < 10; i++){
+    var item = {
+      id: 'img'+ i,
+      imgsrc: Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '我是第' + i + '张图片'),
+      alt: Mock.mock('@url()'),
+      href: Mock.mock('@url()'),
+      name: Mock.mock('@cname'),
+      grade: '等级: LV'+ `${i}`,
+      card:Mock.mock('@cparagraph(1, 3)'),
+      usershare:Mock.mock('@cparagraph'),
+      time: Mock.mock('@time'),
+      like:Mock.mock('@natural(100, 600)'),
+      comment:Mock.mock('@natural(100, 600)')
+
+    }
+  let imglist = [];
+  for(var j = 0; j < 3;j++){
+    let items = {
+      id: 'img'+ j,
+      itemimage: Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '我是第' + j + '张图片'),
+      alt: Mock.mock('@url()'),
+      href: Mock.mock('@url()'),
+    }
+    imglist.push(items)
+  }
+  item.imglist=imglist
+    alldetail.push(item);
+  }
+
+  return alldetail
+}
+console.log(getAlldetail(),"66666")
+
+
+
+
 // const getHomelivelist = function(){
 //   for (var i = 0; i < 3; i++) {
 //     var item = {
@@ -60,7 +101,9 @@ return foodlist
 //   console.log(homelivelist)
 //   return homelivelist
 // }
-Mock.mock('http://www.daxunxun.com/stratesearch', 'get', getstrasearchlist)
-Mock.mock('http://www.daxunxun.com/foodlist', 'get', getFoodlist)
-// Mock.mock('http://www.daxunxun.com/live', 'get', getHomelivelist)
-Mock.mock('http://www.daxunxun.com/banner','get',getBanner)
+// console.log(getlist())
+Mock.mock('http://www.daxunxun.com/stratesearch', 'get', getstrasearchlist);
+Mock.mock('http://www.daxunxun.com/foodlist', 'get', getFoodlist);
+// Mock.mock('http://www.daxunxun.com/live', 'get', getHomelivelist);
+Mock.mock('http://www.daxunxun.com/banner','get',getBanner);
+Mock.mock('http://www.daxunxun.com/alldetail','get',getAlldetail);

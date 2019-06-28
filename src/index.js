@@ -21,6 +21,7 @@ ReactDOM.render(
       <Route path = '/sensedetail' component = { Style } />
       <Route path = '/ticket' component = { Style } />
       <Route path = '/login' component = { Style } />
+      <Route path = '/all' component = { Style } />
         <Route path = "/" component = { App}/>
       </Switch>
     </HashRouter>
