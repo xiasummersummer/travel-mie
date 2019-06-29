@@ -1,0 +1,162 @@
+@import '@/lib/reset.scss';
+
+
+html, body, #root .bigbox{
+  @include rect(100%, 100%);
+}
+
+.box {
+@include rect (100%,100%);
+  .liveheader {
+    @include rect (100%, .64rem);
+    overflow: hidden;
+    @include flexbox();
+    @include flex-direction(row);
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      float: left;
+      width: .5rem;
+      height: .5rem;
+      margin: .05rem 0.08rem 0 .15rem;
+    }
+    .title {
+      float: left;
+      font-size: .25rem;
+      color: #111;
+    }
+  }
+  .findbg{
+    background:linear-gradient(0deg,rgba(0,212,206,1),rgba(3,222,168,1));
+    width: 100%;
+    height: 365px;
+    padding-top: 20px;
+    .findtop {
+      width: 100%;
+      height: 40px;
+      margin: 0 10px 20px;
+      background: transparent;
+      @include flexbox();
+      flex-direction: row;
+      justify-items: flex-start;
+      align-items: center;
+        .day {
+          font-size: 40px;
+          margin: 0 .1rem;
+          color: #fff;
+        }
+        .year {
+          font-size: 10px;
+          color: #fff;
+          em {
+            display: block;
+            font-style: normal;
+          }
+        }
+        .text {
+          color: #fff;
+          font-size: 30px;
+          margin: 0 .1rem;
+        }
+      }
+    .livebottom {
+      width: 100%;
+      height: 80px;
+      background: #ffff;
+      text-align: center;
+      padding: .1rem .1rem 0;
+      .top {
+        font-size: 18px;
+        color: #111;
+      }
+      .my {
+        font-size: 9px;
+        span {
+          font-size: 9px;
+          color: #ff9d00;
+        }
+      }
+    }
+  }
+
+  .findcontent {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    margin:20px 0;
+    padding: 0 10px;
+    .findleft {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      @include rect (100%, 100%);
+      width: 160px;
+      height: 130px;
+      .findtitle {
+        flex:1;
+        font-size: 16px;
+        color: #111;
+      }
+      .findlast {
+        flex-direction: column;
+        @include rect (100%, auto);
+        height: auto;
+        overflow: auto;
+        padding-top: 18px;
+        .user {
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: .5rem;
+          }
+          .m18 {
+            font-size: 15px;
+            color: #ff9d00;
+          }
+        }
+        .num {
+          .eye {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+    .findright {
+      float: right;
+      img {
+        width: 190px;
+        height: 130px;
+      }
+    }
+  }
+  // .slider-decorator-0 {
+  //   position: absolute; bottom: 0px; width: 100%; text-align: center;
+  //   .am-carousel-wrap {
+  //     font-size: 18px;
+  //     color:#000;
+  //     background: none;
+  //     text-align: center;
+  //     zoom: 1;
+  //     width: 100%;
+  //     .am-carousel-wrap-dot {
+  //       display: inline-block;
+  //       zoom: 1;
+  //       span{
+  //         display: inline-block;
+  //         width: 10px;
+  //         height: 10px;
+  //         background: #ccc;
+  //       }
+  //     }
+  //     .am-carousel-wrap-dot-active {
+  //       span {
+  //         background: #888;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+
+
+
