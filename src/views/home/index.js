@@ -4,12 +4,16 @@ import UI from './UI';
 import * as ajax  from '@/api'
 // import axios from 'axios'
 
-const mapStateToProps = (state) =>({
+const mapStateToProps = (state) =>{
+  // console.log(state)
+  return {
   homebannerlist: state.home.homebannerlist,
   homeprolist: state.home.homeprolist,
   hometestdata: state.home.hometestdata,
-  liveimglist:state.home.liveimglist
-})
+  liveimglist:state.home.liveimglist,
+  livebannerlist:state.home.livebannerlist,
+  recommendlist: state.home.recommendlist
+}}
 const mapDispatchToProps = (dispatch)=>{
  return {
   getBannerListData () {
@@ -34,9 +38,18 @@ const mapDispatchToProps = (dispatch)=>{
         type: 'changeliveimglist',
         data: res.data
       })
-      console.log(res.data)
     })
-  }
+  },
+  getLivebannerdata(){
+    ajax.getLiveBanner().then(res => {
+      // console.log(res.data)
+      dispatch({
+        type: 'changelivebannerlist',
+        data: res.data
+      })
+      // console.log(res.data)
+    })
+  },
   // getProlistData () {
   //   ajax.getHomePro().then(res => {
   //     console.log(res.data)
@@ -46,7 +59,7 @@ const mapDispatchToProps = (dispatch)=>{
   //     })
   //   })
   // },
-
+  
  }
 }
  const Com = connect(mapStateToProps, mapDispatchToProps)(UI);

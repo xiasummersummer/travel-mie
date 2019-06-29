@@ -21,13 +21,16 @@ class Com extends React.Component {
       })
     })
   }
+  goreturn () {
+    this.props.history.go(-1)
+  }
   render(){
         // {console.log(this.state.detailbanner)}
         // console.log(this.props)
     return (
       <div className="detailbox">
         <div className="detailtop">
-          <div className="detailleft iconfont iconzuojiantou"></div>
+          <div className="detailleft iconfont iconzuojiantou" onClick={this.goreturn.bind(this)}></div>
           <div className="detitle">
             景点详情页
           </div>

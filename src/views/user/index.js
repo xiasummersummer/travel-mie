@@ -2,9 +2,12 @@ import { connect } from 'react-redux';
 import UI from './UI';
 // import api from '@/api';
 
-const mapStateToProps = (state) =>({
-  homebannerlist: state.home.homebannerlist
-})
+const mapStateToProps = (state) =>{
+  // console.log(state)
+  return{
+  homebannerlist: state.home.homebannerlist,
+  IsLogin: state.login.IsLogin
+}}
 const mapDispatchToProps = (dispatch)=>{
  return {
   // getBannerListData () {

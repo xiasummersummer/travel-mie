@@ -61,9 +61,22 @@ export const getSensehotlist= () => {
 export const getLiveimglist= () => {
   return ajax.get('/liveimgs')
 }
+export const getRecommend= () => {
+  return ajax.get('/recommendlist')
+}
+export const getLiveBanner= () => {
+  return ajax.get('/livebanner')
+}
 export const login = (params) => {
+  // console.log(params)
   return ajax.post('/users/login', params)
 }
+export const sendMsg = (tel) => {
+  console.log(`/users/sendCode？tel=`+ tel)
+  return ajax.get(`/users/sendCode?tel=`+ tel)
+}
+
+
 
 
 

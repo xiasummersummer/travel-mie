@@ -34,6 +34,7 @@
       margin: 0 auto;
       @include flexbox();
       @include background-color(#eee);
+      // @include text-color(#fff);
       text-align: center;
       overflow:hidden;
       border-radius: .2rem;
@@ -41,7 +42,7 @@
         @include flex();
       }
       .active {
-        @include background-color(#ccc);
+        @include background-color(#00cccc);
       }
       .navr {
         @include flex();

@@ -4,7 +4,7 @@ const getBanner = function(){
 for(var i = 0; i < 10; i++){
   var item = {
     id: 'img'+i,
-    itemimage: Mock.Random.image('200x100', '#894FC4', '#FFF', 'png', '我是第' + i + '张图片'),
+    itemimage: Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '我是第' + i + '张图片'),
     alt: Mock.mock('@url()'),
     href: Mock.mock('@url()'),
   }
@@ -28,6 +28,39 @@ for(var i = 0; i < 3; i++){
 }
 // console.log(bannerlist)
 return liveimg
+}
+// 直播
+const getLiveBanner = function(){
+  let livebannerlist = []
+for(var i = 0; i < 10; i++){
+  var item = {
+    id: 'img'+i,
+    itemimage: Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '直播banner' + i + '张图片'),
+    alt: Mock.mock('@url()'),
+    href: Mock.mock('@url()'),
+  }
+  livebannerlist.push(item);
+}
+// console.log(bannerlist)
+return livebannerlist
+}
+
+// 推荐
+
+const getRecommendlist = function(){
+  let recommenddata = []
+for(var i = 0; i < 4; i++){
+  var item = {
+    id: 'img'+i,
+    itemimage: Mock.Random.image('200x100', Mock.mock('@color'), '#FFF', 'png', '我是第' + i + '张图片'),
+    alt: Mock.mock('@url()'),
+    href: Mock.mock('@url()'),
+    name:'历史文化'+i
+  }
+  recommenddata.push(item);
+}
+// console.log(bannerlist)
+return recommenddata
 }
 
 
@@ -104,7 +137,7 @@ for(let i = 0; i < 10; i++){
     countnum:'10分',
     decribe:'山西特色'+i+'陕西西胜多负少都是对的所是多少安',
     assess:'很好',
-    add:'体育场'+i,
+    add:'体育场',
     salenum:'月销99'+i+'+',
     recomend: [],
     time: '早10:'+i+'点前可订票'
@@ -198,7 +231,7 @@ const getAlldetail = function () {
       alt: Mock.mock('@url()'),
       href: Mock.mock('@url()'),
       name: Mock.mock('@cname'),
-      grade: '等级: LV'+ `${i}`,
+      grade: '等级: LV',
       card:Mock.mock('@cparagraph(1, 3)'),
       usershare:Mock.mock('@cparagraph'),
       time: Mock.mock('@time'),
@@ -256,6 +289,8 @@ Mock.mock('http://www.daxunxun.com/sensehotlist', 'get', getSensehotlist)
 // Mock.mock('http://www.daxunxun.com/live', 'get', getHomelivelist)
 Mock.mock('http://www.daxunxun.com/banner','get',getBanner)
 Mock.mock('http://www.daxunxun.com/liveimgs','get',getLiveimglist)
+Mock.mock('http://www.daxunxun.com/recommendlist','get',getRecommendlist)
+Mock.mock('http://www.daxunxun.com/livebanner','get',getLiveBanner)
 
 for (let i = 0;i<scenicData.length;i++) {
   Mock.mock('http://www.daxunxun.com/sensedetail/img'+i, 'get', scenicData[i])

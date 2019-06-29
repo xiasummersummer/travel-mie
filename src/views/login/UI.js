@@ -1,7 +1,8 @@
 import React from 'react';
-// import axios from 'axios'
-import '@/views/css/login.scss'
-// import { Toast } from 'antd-mobile'
+// import axios from 'axios';
+import '@/views/css/login.scss';
+import * as ajax from '@/api';
+import { Toast } from 'antd-mobile'
 import Phonelogin from '@/components/homebox/Phonelogin.js'
 import Homereg from '@/components/homebox/Homereg.js'
 class Com extends React.Component {
@@ -10,8 +11,13 @@ class Com extends React.Component {
     this.state=({
       username: '',
       password: '',
+      msg:'',
       accountnum: true,
-      phone:1
+      phone:1,
+      telOk: false,
+      passwordOk: false,
+      msgOk: false,
+      msgCode:''
     })
   }
   phoneclogin () {
@@ -62,8 +68,98 @@ class Com extends React.Component {
   //     }
   //   })
   // }
+  loginClick (e) {
+    if (e.target.className === 'login') {
+      if (this.state.telOk && this.state.passwordOk) {
+        console.log('登陆成功')
+        this.props.changeIsLogin('ok');
+        this.props.history.push('/user');
+        ajax.login({
+          username: this.state.username,
+          password: this.state.password
+        }).then(res => {
+          console.log(res.data)
+        })
+      } else {
+        console.log('请输入正确的手机号或密码')
+      }
+    } else if (e.target.className === "getcode") {
+      ajax.sendMsg(this.state.username).then(res => {
+        console.log(res.data)
+        this.setState({
+          msgCode: res.data.code
+        })
+      })
+    } else if (e.target.className === "login msg") {
+      if (this.state.telOk && this.state.msgOk) {
+        console.log('登陆成功')
+        this.props.changeIsLogin('ok');
+        this.props.history.push('/user');
+        ajax.login({
+          username: this.state.username,
+          password: this.state.password
+        }).then(res => {
+          console.log(res.data)
+        })
+      } else {
+        console.log('请输入正确的手机号或密码')
+      }
+    }
+  }
+  loginBlur (e) {
+    if (e.target.className === "phonepsd") {
+      if (/^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/.test(e.target.value)) {
+        // console.log('密码格式正确')
+        // console.log(e.target.value)
+        this.setState({
+          telOk: true,
+          password:e.target.value
+        })
+      } else {
+        // console.log('密码格式不正确');
+        this.setState({
+          telOk: true,
+          password:e.target.value
+        })
+      }
+    } else if (e.target.className === "tel") {
+      if (/^1[3456789]\d{9}$/.test(e.target.value)) {
+        // console.log('手机格式正确')
+        this.setState({
+          passwordOk: true,
+          username:e.target.value
+        })
+        console.log(this.state)
+      } else {
+        // console.log('手机格式不正确')
+        this.setState({
+          passwordOk: false
+        })
+      }
+    } else if(e.target.className === "msg") {
+      this.setState({
+        msg: e.target.value
+      })
+      console.log(this.state)
+      if (this.state.msgCode === this.state.msg) {
+        this.setState({
+          msgOk: true
+        })
+      } else {
+        console.log('请输入正确的短信验证码');
+        this.setState({
+          msgOk: false
+        })
+      }
+      
+    }
+  }
+
+  componentDidMount () {
+   
+  }
+
   render(){
-    console.log(this.props)
     return (
       <div className="loginbox">
         <div className="header">
@@ -75,7 +171,7 @@ class Com extends React.Component {
            <img className="logo" src={require('@/assets/loginlogo.png')} alt=""/>
           </div>
         </div>
-          <div className="logintype">
+          <div className="logintype" onClick = {this.loginClick.bind(this)} onBlur = {this.loginBlur.bind(this)}>
             <div className="type">
               <div onClick = { this.phoneclogin.bind(this) } className="account">
                 <div>账号密码登录</div>
@@ -110,10 +206,6 @@ class Com extends React.Component {
               <span className="agree">同意《咩咩旅行服务协议》和《隐私政策》</span>
             </div>
           </div>
-
-
-
-
 
         {/* <div className="userlogo">
           <img src="" alt=""/>

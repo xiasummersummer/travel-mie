@@ -1,5 +1,5 @@
 @import '@/lib/reset.scss';
-* { touch-action: pan-y; } 
+// * { touch-action: pan-y; } 
  html, body, #root, .container {
    @include rect(100%, 100%);
  }
@@ -14,15 +14,23 @@
   @include overflow();
   .header {
     @include rect(100%, .6rem);
+    position: fixed;
+    top:0;
+    z-index:9999;
+    margin-bottom:.6rem;
     // @include background-color(#4f8cff);
-    // background:linear-gradient(90deg,#0af,#0085ff);
+    background:linear-gradient(0deg,rgba(0,212,206,1),rgba(3,222,168,1));
+      // background:linear-gradient(90deg,#0af,#0085ff);
     .searchbox{
-      margin: .1rem 0 0 .1rem;
+    @include rect(100%, .4rem);
+    margin: .2rem 0 0 .1rem;
       .searchl {
         border: 1px solid #ccc;
-        background-color: (#eee);
-        @include rect(3rem, .4rem);
-        line-height: .4rem;
+        @include rect(3rem, .3rem);
+        line-height: .3rem;
+        @include text-color(#fff);
+        text-indent: .1rem;
+        border-radius: .15rem;
         float: left;
         .search {
           margin-left:.1rem;
@@ -40,24 +48,17 @@
       }
       .ring {
         float: right;
-        margin-right: .1rem;
-        line-height: .4rem;
-        font-size: .25rem;
+        margin-right: .2rem;
+        @include text-color(#fff);
+        line-height: .3rem;
+        font-size: .2rem;
       }
     }
   }
   .content {
     @include flex();
     @include rect(100%, auto);
-    // .slider-decorator-0 {
-    //   height:30px;
-    //   .am-carousel-wrap {
-    //     height:20px;
-    //     .am-carousel-wrap-dot{
-    //       height:20;
-    //     }
-    //   }
-    // }
+   margin-top:.5rem;
     .homenav{
       @include flexbox();
       @include rect(100%, 1rem);
@@ -68,67 +69,98 @@
         background-color:#eee;
       }
       .scenic {
-        @include flex()
+        @include text-color(#b160df);
+        @include flex();
+        .iconjingdian {
+          font-size: .4rem;
+        }
       }
       .stay{
-        @include flex()
-
+        @include text-color(#4f8cff);
+        @include flex();
+        .iconzhusu{
+          font-size: .4rem;          
+        }
       }
       .culture{
-        @include flex()
+        @include text-color(#ff9d00);
+        @include flex();
+        .iconmeishi1{
+          font-size: .4rem;          
+        }
       }
       .food{
-        @include flex()
+        @include flex();
+        @include text-color(#fd4e4e);
+        .iconwenhua{
+          font-size: .4rem;
+        }
       }
     }
     .tripnews {
       @include rect(100%,.8rem);
-      border: 1px solid #ccc;
+      // border: 1px solid #ccc;
+      padding:.25rem 0 0 .1rem;
       .tnl {
         float: left;
+        @include rect(1rem, .3rem);
+        border-radius: .15rem;
+        @include background-color(#00cccc);
+        line-height:.3rem;
+        text-align:center;
+        @include text-color(#fff);
       }
       .newcont{
         float: left;
-
+        text-align: center;
+        @include rect(2rem, auto);
       }
       .rightarrow{
         float: left;
-
+        text-align: center;
+        @include rect(.5rem, .3rem);
+        line-height:.3rem;
       }
     }
     .live{
-      border: 1px solid #ccc;
+      // border: 1px solid #ccc;
        @include rect(100%, auto);
        .livetitle {
-         text-align: center;
-         @include rect(60%, .4rem);
-         margin: 0 auto;
-         line-height: .4rem;
-         @include background-color(#ccc);
-         border-radius: .2rem;
+          text-align: center;
+          @include rect(60%, .3rem);
+          margin: 0 auto;
+          line-height: .3rem;
+          @include background-color(#00cccc);
+          @include text-color(#fff);
+          border-radius: .15rem;
        }
        .locklive {
          @include flexbox();
          @include rect(100%, 1.2rem);
-         border:1px solid #ccc;
+         margin-top:.1rem;
          li {
            @include flex();
            text-align: center;
+           img {
+             @include rect(1rem,.8rem)
+           }
          }
        }
        .livadv{
-        margin-top:.1rem;
+         
        }
     }
     .hotrecommend{
       @include rect(100%, auto);
+      margin-top:.1rem;
       .hottitle{
         text-align: center;
-        @include rect(60%, .4rem);
+        @include rect(60%, .3rem);
         margin: 0 auto;
-        line-height: .4rem;
-        @include background-color(#ccc);
+        line-height: .3rem;
+        @include background-color(#00cccc);
         border-radius: .2rem;
+        @include text-color(#fff);
       }
       .hotbanner{
         margin-top: .1rem;
@@ -136,30 +168,55 @@
       .hotcontent{
         @include flexbox();
         @include rect(100%, 1rem);
-        li {
+        text-align: center;
+        margin-top:.2rem;
+        .recommendlist {
+          @include flex();
           @include rect(24%, 1rem);
+          list-style:none;
+          .recimg {
+            @include rect(.8rem,.8rem);
+          }
+          .recommtitle{}
         }
       }
     }
     .talkabout{
       @include rect(100%, auto);
+      margin-top:.2rem;
+      text-align: center;
       .talkabouttop{
         @include rect(100%, .5rem);
         .ttl{
-          @include rect(.1rem, .5rem);
+          @include rect(.1rem, .4rem);
           float: left;
+          background-color:#00cccc;
         }
         .say{
-          @include rect(1rem, .5rem);
+          @include rect(1rem, .2rem);
+          margin:.1rem 0 0 .2rem;
+          background-color:#00cccc;
+          @include text-color(#fff);
           float: left;
         }
         .look{
-          @include rect(.5rem, .5rem);
-          float: left;
+          @include rect(1rem, .2rem);
+          background-color:#00cccc;
+          margin:.1rem .1rem 0 0;
+          line-height:.2rem;
+          border-radius:.08rem;
+          @include text-color(#fff);
+          float: right;
         }
       }
       .talkcontent{
-        @include rect(100%, .4rem)
+        @include rect(100%, auto)
+      }
+      .change {
+        background-color:#00cccc;
+        @include rect(1rem, .2rem);
+        margin: .1rem auto;
+        @include text-color(#fff);
       }
     }
   }

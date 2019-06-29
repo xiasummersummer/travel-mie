@@ -1,45 +1,37 @@
 import React from 'react';
 import '@/views/css/user.scss';
-import userLogo from '@/assets/logo.png';
 import userAdd from '@/assets/useradd.png';
-import userLogin from '@/assets/userlogin.png';
 import One from '@/assets/one.png';
 import Two from '@/assets/two.png';
 import Tree from '@/assets/tree.png';
 import Four from '@/assets/four.png';
 import Five from '@/assets/five.png';
+import Nologin from '@/components/common/Nologin';
+import Login from '@/components/common/Login';
 
 class Com extends React.Component {
-  // componentDidMount () {
-  //   this.props.getBannerListData()
-  // }
+  constructor (props) {
+    super(props)
+  }
+  componentDidMount () {
+    console.log(this.props.IsLogin)
+  }
+  goLogin (e) {
+    if (e.target.className === 'loginbtn') {
+      this.props.history.push('/login');
+    }
+  }
   render(){
-    console.log(this.props)
     return (
       <div className="userbox">
         <div className="usercontainer">
             <div>
               <div className="header"></div>
-              <div className="usercontent">
-                {/* <div className="userlogo">
-                  <div className="top">
-                    <span className = "iconfont iconxinxi first"></span>
-                    <img src={ userLogo } alt=""/>
-                    <span className = "iconfont iconshezhi last"></span>
-                  </div>
-                  <div className="bottom">
-                    <h5>咩咩</h5>
-                    <p>Angel</p>
-                    <span>因为有梦，所以勇敢出发，选择出发，便只顾风雨兼程。</span>
-                  </div>
-                </div> */}
-                <div className="gologin">
-                  <img src= { userLogin } alt=""/>
-                  <p>登录后享受更多优惠及服务</p>
-                  <div className="loginbtn">
-                    <span>登录/注册</span>
-                  </div>
-                </div>
+              <div className="usercontent" onClick = { this.goLogin.bind(this) }>
+                {
+                  this.props.IsLogin ? <Login/> : <Nologin />
+                }
+                {/* <Login /> */}
                 <div className="footprin">
                   <h5>我的足迹</h5>
                   <p>点击生成足迹地图</p>
